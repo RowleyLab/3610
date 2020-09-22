@@ -200,6 +200,8 @@
 	\item The van der Waals equation can be expressed in terms of reduced variables, and represent all gases simultaneously
 	\item Reduced van der Waals equation: $p_r = \dfrac{8T_r}{3V_r-1}-\dfrac{3}{V_r^2}$
 \end{itemize}
+\paragraph{Table 1C.4 shows a variety of different equations of state}
+
 \chapter{The First Law}
 \begin{itemize}
 	\item The first law of thermodynamics states that energy can be neither created nor destroyed, but only change form or transfer between systems
@@ -241,6 +243,7 @@
 		\item Note that the internal energy is independent of both $p$ and $V$
 	\end{itemize}
 	\item For a linear diatomic at room temperature (2 rotations added), $U_m = \dfrac{5}{2}RT$
+	\item For a non-linear molecule at room temperature (3 rotations added), $U_m = 3RT$
 	\item Mathematically, the first law can be stated as: $\Delta U = q + w$
 	\item Considering infinitesimal changes gives: $\mathrm{d}U = \mathrm{d}q + \mathrm{d}w$
 \end{itemize}
@@ -330,7 +333,12 @@
 	\item Note that this is the total change in heat capacity, taking into account the reaction stoichiometry:
 	
 	$\Delta_rC_p^{\std}=\displaystyle\sum\limits_{Products}\nu C_p^{\std} - \displaystyle\sum\limits_{Reactants}\nu C_p^{\std}$
-	\item Even this approach is an approximation, as the heat capacities of individual substances can change with temperature
+	\item The combustion fo hydrogen gas has $\Delta_{rxn}H^{\std}(298~K)=-241.82~\nicefrac{kJ}{mol}$
+	\begin{itemize}
+		\item Find $\Delta_{rxn}H^{\std}(273~K)$ $\left(-241.3~\nicefrac{kJ}{mol}\right)$
+		\item Find $\Delta_{rxn}H^{\std}(2527~K)$ (Low-T $C_p$ limit: $-288.15~\nicefrac{kJ}{mol}$ High-T $C_p$ limit: $-260.35~\nicefrac{kJ}{mol}$)
+	\end{itemize}
+	\item Even this approach is an approximation, as the heat capacities of individual substances can change with temperature, as illustrated by the above example
 \end{itemize}
 
 \section{State Functions and Exact Differentials}
@@ -348,31 +356,38 @@
 	\item Partial derivatives of natural variables yield state variables, but here we differentiate with respect to easily measurable $V$ and $T$
 	\item Sometimes a partial derivative has a straightforward physical interpretation (such as $C_p$ and $C_V$), and sometimes not
 	\item The \emph{internal pressure} characterizes how internal energy changes with volume: $\pi_T = \left(\dfrac{\partial U}{\partial V}\right)_T$
+	\item Figure 2D.4 illustrates how internal pressure can change with pressure
 	\item So, the exact differntial is: $\mathrm{d}U = \pi_T\mathrm{d}V + C_V\mathrm{d}T$
-	\item Figures 2D.2 and 2D.3 illustrate what the exact and partial derivative mean
-	\item Note that while we use $C_V$ in this expression, the differential is exact regardless of the conditions
+	\item Figure 2D.2 illustrates what the exact and partial derivative mean
+	\item Note that while we use $C_V$ in this expression, the differential is exact regardless of the conditions as long as both terms are included
 	\item At constant pressure we can get new equations which give us new physical constants:
 	\item The expansion coefficient: $\alpha = \dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_p$ 
 	\item The isothermal compressibility: $\kappa_T = -\dfrac{1}{V}\left(\dfrac{\partial V}{\partial p}\right)_T$
 	\item With some algebra, we finally arrive at: $\left(\dfrac{\partial U}{\partial T}\right)_p = \alpha\pi_T V + C_V$
-	\item And finally, we can (Justification 2D.1) get the general expression: $C_p-C_V = \dfrac{\alpha^2 TV}{\kappa_T}$
+	\item And finally, we can (page 66) get the general expression: $C_p-C_V = \dfrac{\alpha^2 TV}{\kappa_T}$
 \end{itemize}
 \paragraph{The Joule-Thompson Effect}
 \begin{itemize}
 	\item We can examine the exact differential for enthalpy in a similar way: 
 	
-	$\mathrm{d}H = \left(\dfrac{\partial H}{\partial p}\right)_T\mathrm{d}p + \left(\dfrac{\partial H}{\partial T}\right)_p\mathrm{d}T = -\mu C_p\mathrm{d}p + C_p\mathrm{d}T$
+	$\mathrm{d}H = \left(\dfrac{\partial H}{\partial p}\right)_T\mathrm{d}p + \left(\dfrac{\partial H}{\partial T}\right)_p\mathrm{d}T$
+	\item Use the isenthalpic condition to relate the two partial derivatives to each other, then re-write the exact differential as:
+	
+	$\mathrm{d}H = -\mu C_p\mathrm{d}p + C_p\mathrm{d}T$ 
 	\item $\mu$ is the Joule-Thompson coefficient, $\mu = \left(\dfrac{\partial T}{\partial p}\right)_H$
 	\item $\mu$ can be directly observed under \emph{isenthalpic} conditions, as we will do next week in lab
 	\item $\mu > 0$ for most gases under standard conditions, but can become negative under certain conditions
-	\item Figures 2D.10 and 2D.11 show the heating and cooling regions in $T$/$p$ space
+	\item Figures 2D.8 and 2D.9 show the heating and cooling regions in $T$/$p$ space
 	\item The Joule-Thompson effect can be interpreted with respect to the exchange between potential and kinetic energy as gas molecules move farther apart in an expansion
 \end{itemize}
 
+\section{Heat Capacity}
+
+This is a new section. It relies a bit on some quantum topics which we won't investigate until 3620, and frankly just seems too esoteric to be worth the time in this class
 
 \section{Adiabatic Changes}
 \begin{itemize}	
-	\item We can find $\Delta U$ through a hypothetical two-step process shown in Figure 2E.1
+	\item We can find $\Delta U$ through a hypothetical two-step process shown in Figure 2F.1
 	\begin{itemize}
 		\item First an isothermal expansion. For an ideal gas this process keeps $U$ constant
 		\item Then an isochoric cooling. For any substance $\Delta U = C_V\Delta T$
