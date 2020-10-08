@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage[verbose]{wrapfig}
 \graphicspath{ {images/} }
-\usepackage{caption}
+%\usepackage{caption}
 \usepackage{pstricks}
 \usepackage[fleqn]{amsmath}
 \usepackage{units}
@@ -71,13 +71,7 @@
 %\definecolor{red}{rgb}{.98,0,0}
 %\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=black,bookmarksnumbered,plainpages=false]{hyperref}
 
-\definecolor{darkblue}{rgb}{0,0,.6}
-\definecolor{darkred}{rgb}{.7,0,0}
-\definecolor{darkgreen}{rgb}{0,.6,0}
-\definecolor{red}{rgb}{.98,0,0}
-\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=black,bookmarksnumbered,plainpages=false]{hyperref}
-
-\usepackage{hypcap}
+%\usepackage{hypcap}
 % Define a macro \Autoref like \autoref but with a forced capital letter
 % Note that Figures, Equations, and Tables have a capital letter anyway.
 \newcommand{\Autoref}[1]{\def\sectionautorefname{Section}
@@ -118,8 +112,8 @@
 \chapterstyle{thatcher}
 \makeevenfoot{plain}{}{}{}
 \makeoddfoot{plain}{}{}{}
-\makeevenhead{plain}{}{}{CHEM~3610,~Page~\thepage~of~\pageref{LastPage}}
-\makeoddhead{plain}{}{}{CHEM~3610,~Page~\thepage~of~\pageref{LastPage}}
+\makeevenhead{plain}{}{}{CHEM~3610~--~\thepage~of~\pageref{LastPage}}
+\makeoddhead{plain}{}{}{CHEM~3610~--~\thepage~of~\pageref{LastPage}}
 \pagestyle{plain} 
 \usepackage{nth}
 
