@@ -1,4 +1,4 @@
-\ProvidesPackage{HomeworkStyle}
+\ProvidesPackage{NotesStyle}
 
 %Graphics packages
 \usepackage{graphicx}
@@ -84,12 +84,6 @@
 \usepackage[margin=1in]{geometry}
 \newlength{\figsize}\setlength{\figsize}{.9\textwidth}
 
-% A command to make a standard state symbol (horizontal crossed circle)
-\newcommand{\std}{\ooalign{\hidewidth $\circ$\hidewidth\cr\rule[0.57ex]{1.37ex}{0.5pt}}}
-
-% A command to generate an inexact differential character
-\def\dbar{{\mathchar'26\mkern-11.5mu \mathrm{d}}}
-
 %\OnehalfSpacing
 \nonzeroparskip
 
@@ -112,8 +106,8 @@
 \chapterstyle{thatcher}
 \makeevenfoot{plain}{}{}{}
 \makeoddfoot{plain}{}{}{}
-\makeevenhead{plain}{}{}{CHEM~3610,~Fall~2017~--~\thepage~of~\pageref{LastPage}}
-\makeoddhead{plain}{}{}{CHEM~3610,~Fall~2017~--~\thepage~of~\pageref{LastPage}}
+\makeevenhead{plain}{}{}{\thepage~of~\pageref{LastPage}}
+\makeoddhead{plain}{}{}{\thepage~of~\pageref{LastPage}}
 \pagestyle{plain} 
 \usepackage{nth}
 
@@ -126,8 +120,3 @@
 % Make the bullets on itemized lists not be a `-`
 \renewcommand{\labelitemi}{$\circ$}
 \renewcommand{\labelitemii}{\textbullet}
-
-\usepackage{tikz}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
-

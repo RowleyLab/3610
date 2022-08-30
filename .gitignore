@@ -1,9 +1,6 @@
 *.log
-
 *.aux
-
 *.out
-
 *.gz
-
-Homework_Keys
+*.fdb_latexmk
+*.fls

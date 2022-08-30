@@ -1,0 +1,1560 @@
+\documentclass[12pt, openany, letterpaper]{memoir}
+\usepackage{NotesStyle}
+
+\begin{document}
+\title{CHEM 3620 Lecture Notes}
+\author{Matthew Rowley}
+\date{Spring 2017}
+\mainmatter
+\maketitle
+\chapter{Fundamental Concepts of Thermodynamics}
+\begin{itemize}
+	\item Thermodynamics is the macroscopic description of the behavior of matter and the transfer of energy between different forms
+	\item Using microscopic (including quantum) details when considering the ensemble
+	\item Thermo can be used to increase yields, predict the efficacy of drugs, design more efficient systems, and design catalysts for a chemical reaction.
+	\item Definitions:
+	\begin{description}
+		\item[System:] All the materials involved in the process under study
+		\item[Surroundings:] Everything else 
+		\item[Open System:] Can exchange matter and energy with surroundings
+		\item[Closed System:] Can exchange energy but not matter with surroundings
+		\item[Isolated System:] Exchanges neigher energy nor matter with surroundings
+		\item[Equilibrium:] System variables (P, T, V, n) are the same throughout a system and do not change over time
+		\item[Adiabatic:] A process that occurs without the transfer of heat
+	\end{description}
+	\item 0th law of thermodynamics: 2 systems that are each separately in thermal equilibrium with a 3rd system are also in thermal equilibrium with each other
+\end{itemize}
+\section*{Derive the ideal gas law from the kinetic theory of gases}
+\begin{itemize}
+	\item Kinetic energy is $\dfrac{1}{2}mv^2$, and momentum is $mv$
+	\item Pressure is caused by elastic collisions with the vessel wall
+	\item Only one cardinal direction (x) is relevant
+	\item $P=\dfrac{F}{A} = \sum\dfrac{ma_i}{A} = \sum\dfrac{1}{A}\left(\dfrac{m\mathrm{d}v_i}{\mathrm{d}t}\right) = \sum\dfrac{1}{A}\left(\dfrac{\mathrm{d}p_i}{\mathrm{d}t}\right)$
+	\item Consider only the average $\mathrm{d}p$, then total $\Delta p_{total} = N_{collisions}\Delta p_{avg}$
+	\item $\Delta p_{avg} = 2p_{avg}$ because the collision inverts the velocity
+	\item The collisional volume for a given period of time is $V = A\Delta x$, and $\Delta x =  v_{avg}\Delta t$
+	\item $N_{collisions} = \tilde{N}_{gas}\left(Av_{avg}\Delta t\right)\left(\dfrac{1}{2}\right)$ -- The half is because half of the molecules are traveling away from the wall.
+	\item $\Delta p_{total} = \left(2mv_{avg}\right)\left(\tilde{N}_{gas}\dfrac{Av_{avg}\Delta t}{2}\right)$
+	\item $\tilde{N}_{gas} = \dfrac{nN_A}{V}$
+	\item $\Delta p_{total} = \dfrac{nN_A}{V}A\Delta t m v_{avg}^2$
+	\item $P = \dfrac{1}{A}\left(\dfrac{\mathrm{d}p_{total}}{\mathrm{d}t}\right) = \dfrac{nN_A}{V}mv_{avg}^2$
+	\item We will see that from the Boltzmann distribution $mv_{avg}^2 = k_BT$, and $N_Ak_B=R$
+	\item $P = \dfrac{nRT}{V}$
+\end{itemize}
+\section*{Intro to gas properties}
+\begin{itemize}
+	\item Since all ideal gases behave the same, we get $P_{total} = \sum\dfrac{n_iRT}{V}$, and Dalton's law of partial pressures: $P_i=\chi_iP_{total}$
+	\item Thermodynamic temperature -- Kelvin. Can be derived from gas volumes under ideal gas conditions.
+	\item Equations of state, like the ideal gas law
+	\item Real gases and the van der Waals equation of state
+	\begin{itemize}
+		\item $P=\dfrac{nRT}{V-nb}-\dfrac{n^2a}{V^2}$
+		\item $b$ accounts for the volume taken up by molecules
+		\item $a$ accounts for the intermolecular interactions
+		\item Accounts for both repulsive and attractive parts of the internuclear potential.
+	\end{itemize}
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item Q1.1 -- Real adiabatic walls
+	\item Q1.2 -- Van der Waals parameters and the potential curve
+	\item Q1.7 -- Equilibrium of only some state variables
+	\item Q1.14 -- Temperature and pressure from the molecular perspective
+	\item P1.3 -- Calculate van der Waals pressure
+	\item P1.38 -- Partial pressures and density
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item Q1.1 -- Vacuum < cork < concrete < copper
+	\item Q1.2 -- The depth of the potential well is greater for water than for He
+	\item Q1.7 -- 2 examples such as:
+	\begin{itemize}
+		\item A divided chamber has different gases on different sides, both at the same temperature. A valve is then opened  between the sides of the chamber. The system is in equilibrium w. r. t. temperature, but not concentration
+		\item Two flexible chambers are filled to 1 atm. with the same gas. One is placed in a freezer, while the other is placed in a sauna. They are then both removed, and connected via cannula. The system is in equilibrium w. r. t. pressure, but not temperature or (for real gases) volume
+	\end{itemize}
+	\item Q1.14 -- With all else equal, the pressure will be the same. He is lighter, so its velocity distribution will be faster. Ar is heavier, so it will move more slowly. In the end, they have the same linear momentum so they exert the same pressure.
+	\item P1.3 --  $P=\dfrac{RT}{V_m-b_m}-\dfrac{a}{V_m^2} = \dfrac{0.08314\nicefrac{Lbar}{molK}\cdot426K}{(1.31-0.0320)\nicefrac{L}{mol}}-\dfrac{1.355\nicefrac{barL^2}{mol^2}}{1.31^2\nicefrac{L^2}{mol^2}} = 26.9 bar$
+	
+	     To compare to ideal gas: $P=\dfrac{RT}{V_m} = \dfrac{0.08314\nicefrac{Lbar}{molK}\cdot426K}{1.31\nicefrac{L}{mol}} = 15.6~bar$
+	     
+	     Because the actual pressure is higher than the ideal pressure, we know that the repulsive part of the potential function is dominant under these conditions.
+	\item P1.38 -- $760~Torr = 1~atm$, and $n = \dfrac{PV}{RT} = \dfrac{1~atm\cdot0.455~L}{0.08206~\nicefrac{Latm}{molK}\cdot298~K}=0.0186~mol$
+	
+	Now, $2.245~g = n_{Ar}\cdot39.948\nicefrac{g}{mol} + n_{Xe}\cdot131.293\nicefrac{g}{mol}$ and $n_{total} = n_{Ar} + n_{Xe}$
+	
+	So: $2.245~g = (n_{total}-n_{Xe})\cdot39.948\nicefrac{g}{mol} + n_{Xe}\cdot131.293\nicefrac{g}{mol} \hspace{1em}\Rightarrow\hspace{1em} n_{Xe} = 0.0164~mol$
+	
+	Finally, $\chi_{_{Xe}} = \dfrac{n_{Xe}}{n_{total}} = \dfrac{0.0164~mol}{0.0186~mol}= 0.882$
+\end{itemize}
+\chapter{Heat, Work, Internal Energy, Enthalpy, and the First Law of Thermodynamics}
+\section*{Internal Energy}
+\begin{itemize}
+	\item In thermodynamics, we are interested in a system's \emph{internal energy}, $U$, which is the sum of the following forms of energy:
+	\begin{itemize}
+		\item Translational kinetic energy of all molecules
+		\item Intermolecular potential energy (coulombic and intermolecular interactions)
+		\item Stored kinetic energy in the form of vibrations and rotations
+		\item Stored potential energy in the form of chemical bonds
+	\end{itemize}
+	\item 1st law of thermodynamics: Energy can neither be created nor destroyed if both the system and surroundings are considered
+	\item For an isolated system, $U$ is constant. For others, $\Delta U_{system} = -\Delta U_{surroundings}$
+	\item $\Delta U = q + w$ -- heat and work are the only 2 ways $U$ can change
+	\item Processes are usually isothermal, isobaric, or isochoric		
+\end{itemize}
+\section*{Work}
+\begin{itemize}
+	\item Mechanical work is the path function $w=\int_{x_i}^{x_f}\!\mathbf{F}\cdot\mathrm{d}\mathbf{x}$
+	\item Note that this is a vector dot product, where $\mathbf{x}$ is the direction of motion
+	\item Positive work increases $U$, while negative work decreases $U$
+	\item Conceptualize work as moving pistons, etc. (Figures 2.1 and 2.2)
+	\begin{itemize}
+		\item For pressure/volume work, we have $w_{PV}=-\int_{V_i}^{V_f}\!P_{external}\mathrm{d}V$
+		\item It is important to correctly define $P_{external}$
+		\item For electrical work, $w_{electrical} = Q\phi=I\phi t$
+		\item Mechanical $PV$ work can be combined with other types of work (electrical, etc.)		
+	\end{itemize}	
+\end{itemize}
+\section*{Heat}
+\begin{itemize}
+	\item ``Heat'' is not a noun! Heat is the flow of energy which results in a change in temperature
+	\item $q$ is positive if the temperature of the surroundings is lowered, and $q$ is negative if the temperature of the surroundings is raised
+	\item Sample problem: Find $q$ and w for the following process. $100.0~g$ of water are placed in a piston with $1~atm$ of external pressure. A heating coil is connected to a $12~V$ power source, and $2.00~A$ of current is passed through it for $1.00\times10^3~s$. The density of water at this temperature and pressure is $997~\nicefrac{kg}{m^3}$ and $0.590~\nicefrac{kg}{m^3}$ for liquid and gas, respectively.		
+\end{itemize}
+\section*{Heat Capacity}
+\begin{itemize}
+	\item From gen-chem, the total amount of heat is $mC\Delta T$	
+	\item ~
+		  \vspace{-2.5em}\[C=\lim_{\mathrm{d} T \to 0}\dfrac{\partial q}{\mathrm{d} T}\]
+	\item Heat capacity is how much energy it takes to increase the temperature.
+	\item Consider heat capacity from a molecular perspective (Figure 2.9)
+	\begin{description}
+		\item[Solid:] At low T, many vibrations are not accessible, so the temperature will rapidly rise with heat and $C$ is low. As T increases, new vibrational modes activate and $C$ increases sharply
+		\item[\ch{s->l}:] As the phase changes, new vibrational modes are immediately added, causing a discontinuous jump in $C$
+		\item[Liquid:] As T increases, vibrational modes are replaced with less-energetic translational modes, so $C$ decreases
+		\item[\ch{l->g}:] All intermolecular vibrational modes are immediately eliminated in vaporization, so $C$ discontinuously drops
+		\item[Gas:] Higher T will activate new molecular vibrational modes, so $C$ increases with T
+	\end{description}
+	\item As chemists, we usually operate under isobaric conditions, so we use $C_P$. We should note that $C_P = C_V + nR$
+	\item Also total heat capacites are related to molar heat capacities by: $C_V = nC_{V,m}$ and $C_P = nC_{P,m}$ where n is the number of moles
+	\item Heat flow for a system, then, is given by $q = \int\! C_{system}(T)\mathrm{d}T = -\int\! C_{surrounding}\mathrm{d}T$
+\end{itemize}
+\section*{State Functions and Path Functions}
+\begin{itemize}
+	\item State functions do not depend on the path of a change, while path functions do.
+	\item For a state function, $\Delta U = \int_{i}^{f}\!\mathrm{d}U = U_f-U_i$
+	\item For path functions, $\oint\! \mathrm{d}w\neq0$	
+\end{itemize}
+\section*{Reversible and Irreversible Processes}
+\begin{itemize}
+	\item Reversible processes are made with the system in internal equilibrium, and the infinitesimal changes to the state variables.
+	\begin{itemize}
+		\item A pully with equal weights on both sides
+		\item Slowly boiling water at 100$^\circ$C
+	\end{itemize}
+	\item reversible processes can be returned to the initial state by simply reversing the infinitesimal changes
+	\item Irreversible processes involve the system in a non-equilibrium state. They usually involve stepwise or rapid changes in the system.
+	\item Practice -- A piston in equilibrium suddenly has weights removed, then suddenly added again. $\Delta U=0$, but $w_{total}\neq 0$. $\Delta U = q+w$, so heat is not zero either.
+	\item Practice -- Repeat the scenario, but make it reversible by removing and adding weights in infinitesimal increments. $w=-\int\!P_{ext}\mathrm{d}V=-nRT\int\!\dfrac{\mathrm{d}V}{V}=-nRT\ln\left(\dfrac{V_f}{V_i}\right)$
+	\item This gives us the rule that total work in a reversible and isothermal cycle is 0
+	\item Indicator diagrams (P-V diagrams) can show the work intuitively -- Figure 2.16	
+\end{itemize}
+\section*{Enthalpy $\neq$ heat}
+\begin{itemize}
+	\item If we are under constant volume conditions with not non-PV work, then $\Delta U_V=q_V$
+	\item Under constant pressure conditions, $\mathrm{d}U = \cancel{\mathrm{d}}q_P - P\mathrm{d}V$
+	\item Integrating from initial to final conditions gives: $\Delta U = q_{P} - P\Delta V$
+	\item This gives us $q_{P} = \Delta U + P\Delta V$
+	\item Since $U$, $P$, and $V$ are state functions, we can define a new state function $H\equiv U+PV$ and $\Delta H = q_P$
+\end{itemize}
+\section*{Calculating $\Delta U$, $\Delta H$, $q$, and $w$ for Processes with Ideal Gases}
+\begin{itemize}
+	\item For constant volume processes, $\Delta U = q_V = C_V\Delta T$ -- $C_V$ is constant across $T$ only for ideal gases
+	\item $\Delta H = \Delta U + \Delta (PV) = C_P\Delta T$
+	\item $w=\int\!P_{ext}\mathrm{d}V$ -- For reversible processes $w=-nRT\ln\left(\dfrac{V_f}{V_i}\right)$
+	\item Find q from the other equations
+	\item Practice -- Consider 2.5 moles of ideal gas ($C_{V,m}=20.78\nicefrac{J}{mol~K}$) at $1.00~L$ and $16.6~bar$ which undergoes:
+	\begin{enumerate}
+		\item Isobaric expansion to $25.0~L$ -- $\Delta U = 99.6~kJ$, $w=-39.8~kJ$, $q=139.4~kJ$, and $\Delta H=139~kJ$
+		\item Isochoric cooling back to the original temperature -- $\Delta U = -99.6~kJ$, $w=0$, $q=-99.6~kJ$
+		\item Isothermal compression back to the initial volume -- $\Delta U = 0$, $w=-nRTln\left(\dfrac{1.00~L}{25.0~L}\right)$, $q=-w$
+	\end{enumerate}
+\end{itemize}
+\section*{Reversible Adiabatic Expansion and Compression of Ideal Gases}
+\begin{itemize}
+	\item Adiabatic expansions and compressions have $q=0$ because \ldots Adiabatic!
+	\item This means that $\Delta U = w$ and $C_V\mathrm{d}T = -P_{external}\mathrm{d}V$ note that only for an ideal gas is $C_V$ independent of volume.
+	\item Use the ideal gas law, $C_V\mathrm{d}T = -\dfrac{nRT}{V}\mathrm{d}V \hspace{1em}\Rightarrow\hspace{1em} C_V\dfrac{\mathrm{d}T}{T} = -nR\dfrac{\mathrm{d}V}{V}$
+	\item Integrating both sides gives: $C_V\ln\left(\dfrac{T_f}{T_i}\right)=-nR\ln\left(\dfrac{V_f}{V_i}\right)$
+	\item $C_P - C_V = nR$, so we can put that in and divide both sides by $C_V$
+	\item $\ln\left(\dfrac{T_f}{T_i}\right)=(1-\dfrac{C_P}{C_V})\ln\left(\dfrac{V_f}{V_i}\right)$
+	\item Define $\gamma \equiv \dfrac{C_{P,m}}{C_{V,m}}$ and substitute it in to get:
+	
+	 $\ln\left(\dfrac{T_f}{T_i}\right)=(1-\gamma)\ln\left(\dfrac{V_f}{V_i}\right) \Rightarrow \ln\left(\dfrac{T_f}{T_i}\right)=\ln\left(\dfrac{V_f}{V_i}\right)^{(1-\gamma)} \Rightarrow \dfrac{T_f}{T_i}=\left(\dfrac{V_f}{V_i}\right)^{(1-\gamma)}$
+	 \item Finally, $\dfrac{T_f}{T_i} = \dfrac{P_fV_f}{P_iV_i} \hspace{1em}\Rightarrow\hspace{1em} \dfrac{P_fV_f}{P_iV_i}=\left(\dfrac{V_f}{V_i}\right)^{(1-\gamma)} \hspace{1em}\Rightarrow\hspace{1em} P_iV_i^\gamma=P_fV_f^\gamma$
+	 \item This will help us solve for $\mathrm{d}V$, and therefore both $w$ and $\Delta U$
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item Q2.2 -- Multiple reversible paths
+	\item Q2.16 -- Relating work to temperature
+	\item Q2.18 -- Adiabatic expansion
+	\item Q2.19 -- Isothermal expansion
+	\item Q2.20 -- Expansion into a vacuum
+	\item P2.1 -- Work from an adiabatic irreversible compression
+	\item P2.26 -- Isothermal and isochoric processes
+	\item P2.28 -- Reversible adiabatic expansion
+	
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item Q2.2: Although both paths are reversible, they are not identical. In the adiabatic case, the temperature will drop and the pressure will be lower. In the isothermal case, to keep the temperature up heat will flow into the system, boosting the final pressure.
+	\item Q2.16: This is not necessarily true. Consider an adiabatic compression, which will elevate the temperature without any heat transfer at all.
+	\item Q2.18: $q=0$ because it is adiabatic, $w<0$ because the gas does work on the surroundings, $\Delta U<0$ because of the values of $q$ and $w$, $\Delta H = \Delta U + \int P\mathrm{d}V + \int V\mathrm{d}P < 0$
+	\item Q2.19: $q>0$ because heating is required to isothermally expand, $w<0$ because expansion does work on the surroundings, $\Delta U = 0$ because for an ideal gas $U$ is a function only of $T$, which is constant in this process. $\Delta H = 0$ because for isothermal processes the $P\mathrm{d}V$ and the $V\mathrm{d}P$ parts cancel.
+	\item Q2.20: $q=0$ because it is adiabatic, $w=0$ because the gas does not do work expanding into a vacuum, $\Delta U=0$ because of the values of $q$ and $w$,$\Delta H = 0$ because the $P\mathrm{d}V$ and the $V\mathrm{d}P$ parts cancel. This process is isothermal-in-disguise
+	\item P2.1: $w=7.82\times10^{3}~J$ and $d=0.642~m$
+	\item P2.26
+	\begin{itemize}
+		\item a: $\Delta U = \Delta H = 0$, $w=-q=-1.27\times10^3~J$
+		\item b: $w=0$, $q=\Delta U=-1.14\times10^3~J$, $\Delta H=-1.91\times10^3~J$
+		\item For the overall process: $w=-1.27\times10^3~J$, $q=130~J$, $\Delta U=-1.14\times10^3~J$, and $\Delta H=-1.91\times10^3~J$
+	\end{itemize}
+	\item P2.28: $q=0$, $\Delta U=w=-4.90\times10^3~J$, $\Delta H=-8.16\times10^3~J$
+\end{itemize}
+\chapter{The Importance of State Functions: Internal Energy and Enthanlpy}
+\section*{Mathematical Properties of State Functions}
+\begin{itemize}
+	\item Thermodynamic Potentials
+	\begin{itemize}
+		\item $U$ is best described by $T$ and $V$ -- though $S$ and $V$ are the ``natural variables''
+		\item $H$ is best described by $T$ and $P$ -- though $S$ and $P$ are the ``natural variables''
+		\item Other potentials, $F$ and $G$ will be discussed later
+		\item $T$ dependence is generally much greater than $V$ or $P$ dependence
+	\end{itemize}
+	\item $P$ is a function of \emph{both} $T$ \emph{and} $V$, so $\mathrm{d}P=\left(\dfrac{\partial P}{\partial V}\right)_T \mathrm{d}V + \left(\dfrac{\partial P}{\partial T}\right)_V \mathrm{d} T$
+	\item This exact differential of a state function is also a state function
+	\item The mixed partial derivatives are also equal: $\left(\dfrac{\partial}{\partial T}\left(\dfrac{\partial P}{\partial V}\right)_T\right)_V = \left(\dfrac{\partial}{\partial V}\left(\dfrac{\partial P}{\partial T}\right)_V\right)_T$
+	\item Solving the partials gives: $\left(\dfrac{\partial P}{\partial V}\right)_T=\dfrac{-RT}{V^2}$ \hspace{1em} and \hspace{1em} $\left(\dfrac{\partial P}{\partial T}\right)_V=\dfrac{R}{V}$
+	\item We can also define two new constants that can be empirically measured and simplify gas equations:
+	\begin{itemize}
+		\item $\beta = \dfrac{1}{V}\left(\dfrac{\partial V}{\partial T}\right)_P$ -- Isobaric volumetric thermal expansion coefficient
+		\item $\kappa = -\dfrac{1}{V}\left(\dfrac{\partial V}{\partial P}\right)_T$ -- Isothermal compressibility
+		\item With these, the total differential becomes: $\mathrm{d}P = \dfrac{\beta}{\kappa}\mathrm{d} T - \dfrac{1}{\kappa V}\mathrm{d} V$
+	\end{itemize}	
+\end{itemize}
+
+\section*{Dependence of $U$ on $T$ and $V$}
+\begin{itemize}
+	\item The total differential of $U$ is: $\mathrm{d}U = \left(\dfrac{\partial U}{\partial T}\right)_V\mathrm{d}T + \left(\dfrac{\partial U}{\partial V}\right)_T \mathrm{d} V$
+	\item But we also know that $\mathrm{d}U = \delta q - P_{ext}\mathrm{d}V$
+	\item Combining them gives: $\mathrm{d}U = \delta q - P_{ext}\mathrm{d}V = \left(\dfrac{\partial U}{\partial T}\right)_V\mathrm{d}T + \left(\dfrac{\partial U}{\partial V}\right)_T \mathrm{d} V$
+	\item For constant $V$, we recover the definition of $C_V$: $\dfrac{\delta q}{\mathrm{d}T} = \left(\dfrac{\partial U}{\partial T}\right)_V$
+	\item For constant $T$, we get the definition of \emph{internal pressure}: $\left(\dfrac{\partial U}{\partial V}\right)_T =T\left(\dfrac{\partial P}{\partial T}\right)_V - P$
+	\item This relation comes from section 5.12
+	\item Note that for internal pressure we usually use a van Der Waals equation of state
+	\item For real systems, then, $\mathrm{d}U = C_V\mathrm{d}T + \left(T\left(\dfrac{\partial P}{\partial T}\right)_V - P\right) \mathrm{d}V$
+\end{itemize}
+
+\section*{Dependance of $H$ on $P$ and $T$}
+\begin{itemize}
+	\item Again, the total differential is: $\mathrm{d}H = \left(\dfrac{\partial H}{\partial T}\right)_P\mathrm{d}T + \left(\dfrac{\partial H}{\partial P}\right)_T \mathrm{d} P$
+	\item For constant $P$, we know that: $\left(\dfrac{\partial H}{\partial T}\right)_P=C_P$
+	\item So: $\Delta H = \int\!C_P\mathrm{d}T$\hspace{1em} and \hspace{1em}$\mathrm{d}H = C_P\mathrm{d}T + \left(\dfrac{\partial H}{\partial P}\right)_T\mathrm{d}P$
+	\item For constant T, start with the definition of $H$: $H=U+PV$
+	\item $\mathrm{d}H=\mathrm{d}U + P\mathrm{d}V + V\mathrm{d}P$
+	\item Now substitute the differential forms of $\mathrm{d}H$ and $\mathrm{d}U$
+	\item $C_P\mathrm{d}T + \left(\dfrac{\partial H}{\partial P}\right)_T\mathrm{d}P = C_V\mathrm{d}T + \left(\dfrac{\partial U}{\partial V}\right)_T\mathrm{d}V + P\mathrm{d}V+V\mathrm{d}P$
+	\item $C_P\mathrm{d}T + \left(\dfrac{\partial H}{\partial P}\right)_T\mathrm{d}P = C_V\mathrm{d}T + \left[\left(\dfrac{\partial U}{\partial V}\right)_T + P\right]\mathrm{d}V + V\mathrm{d}P$
+	\item $\mathrm{d}T = 0$
+	\item $\left(\dfrac{\partial H}{\partial P}\right)_T = \left[\left(\dfrac{\partial U}{\partial V}\right)_T + P\right]\left(\dfrac{\partial V}{\partial P}\right)_T + V$
+	\item Substitute in the definition of $\left(\dfrac{\partial U}{\partial V}\right)_T = T\left(\dfrac{\partial P}{\partial T}\right)_V-P$
+	\item $\left(\dfrac{\partial H}{\partial P}\right)_T = T\left(\dfrac{\partial P}{\partial T}\right)_V\left(\dfrac{\partial V}{\partial P}\right)_T + V$
+	\item $\left(\dfrac{\partial H}{\partial P}\right)_T = V - T\left(\dfrac{\partial V}{\partial T}\right)_P = V\left(1-T\beta\right)$
+	\item $\mathrm{d}H = C_P\mathrm{d}T + \left[V-T\left(\dfrac{\partial V}{\partial T}\right)_P\right]\mathrm{d}P$ -- For solids and liquids, $\left(\dfrac{\partial V}{\partial T}\right)_P \approx 0$
+	\item Practice -- Calculate the change in $H$ when $124~g$ of liquid methanol initially at $1.00~bar$ and $298~K$ undergoes a change of state to $2.50~bar$ and $425~K$. $d=0.791~\dfrac{g}{cm^3}$ and $C_{P,m}=81.1~\dfrac{J}{mol~K}$ -- $39.9~kJ + 0.0235~kJ$
+\end{itemize}
+
+\section*{Joule-Thompson Experiment -- Details in 3625}
+
+\section*{Homework}
+None!
+
+\chapter{Thermochemistry}
+\begin{itemize}
+	\item Internal energy for a molecule is mostly in the form of chemical bonds
+	\item Chemical reactions change the chemical bonds, so the change in internal energy must take some form. Either temperature change, or work (PV or electrochemical) on the surroundings
+\end{itemize}
+\section*{$\Delta H$ in chemical reactions}
+\begin{itemize}
+	\item $\Delta H_{rxn}$ is the heat exchanged between system and surroundings as a reaction proceeds under constant $P$ and $T$
+	\item $\Delta H_{rxn}^{\circ}$ is when all reactants and products are in their standard state
+	\begin{itemize}
+		\item Standard state is activity of $1$ for all solutes, and $P=1~bar$ for all gases. Solids and liquids have their own defined standard states
+		\item Although $\Delta H_{rxn}^{\circ}$ is often tabulated for $T=298~K$, temperature is actually not a part of the standard state
+	\end{itemize}
+	\item The absolute expression is: $\Delta H_{rxn}^{\circ} = \sum\limits_{products} v_iH_i^{\circ} - \sum\limits_{reactants}v_jH_j^\circ$
+	\item We cannot know absolute enthalpies, however, since there is no absolute $0$ reference
+	\item We get around this by using enthalpies of formation
+	\begin{itemize}
+		\item Define $0$ as the elements in their standard states. They certainly have some enthalpy, but we will call it $0$ in reference to everything else
+		\item Find the reaction which produces 1 mole of a compound from only its constituent elements
+		\item $\Delta H_{rxn}^{\circ}$ for this reaction is defined as $\Delta H_f^\circ$
+	\end{itemize}
+	\item Hess's law states that $\Delta H$ for a series of reactions is the same as $\Delta H$ for the final overall reaction. This is just a restatement of what state functions are
+	\item $\Delta H_{rxn}^{\circ} = \sum\limits_{products} v_iH_{f,i}^{\circ} - \sum\limits_{reactants}v_jH_{f,j}^\circ$
+	\item This is like breaking all the reactants down into elements, then building up all the products from those elements
+	\item Practice: Find $\Delta H_{rxn}^{\circ}$ for the reaction \ch{Fe3O4(s) + 4 H2(g) -> 3 Fe(s) + 4 H2O(l)}
+\end{itemize}
+\section*{Hess's Law}
+\begin{itemize}
+	\item Hess's law can be applied to other chains of reactions as well (this is how we actually find heats of formation in practice)
+	\begin{itemize}
+		\item To reverse a reaction, take the negative of its $\Delta H^\circ_{rxn}$
+		\item To multiply a reaction, multiply its $\Delta H^\circ_{rxn}$ by the same number
+	\end{itemize}
+	\item Practice: Find that $\Delta H^\circ_{rxn} = 227.8\dfrac{kJ}{mol}$ for \ch{2 C(s) + H2(g) -> C2H2(g)} given that
+	\begin{itemize}
+		\item \ch{C2H2(g) + 5/2 O2(g) -> 2 CO2(g) + H2O(l)} \hspace{2em} $\Delta H^\circ_{rxn} = -1299.6 \dfrac{kJ}{mol}$
+		\item \ch{C(s) + O2(g) -> CO2(g)} \hspace{2em} $\Delta H^\circ_{rxn} = -393.5 \dfrac{kJ}{mol}$
+		\item \ch{H2(g) + 1/2 O2->H2O(l)} \hspace{2em} $\Delta H^\circ_{rxn} = -285.8 \dfrac{kJ}{mol}$
+	\end{itemize}
+	\item We can estimate individual bond enthalpies as well
+	\item \ch{O-H} bond enthalpy is half of the $\Delta H^\circ_{rxn}$ for \ch{H2O(g) - > 2 H(g) + O(g)} ($463.5\dfrac{kJ}{mol}$)
+	\begin{itemize}
+		\item $\Delta H^\circ_{f}(\ch{H(g)}) = 218.0 \dfrac{kJ}{mol}$
+		\item $\Delta H^\circ_{f}(\ch{O(g)}) = 249.2 \dfrac{kJ}{mol}$
+		\item $\Delta H^\circ_{f}(\ch{H2O(g)}) = -241.8 \dfrac{kJ}{mol}$
+	\end{itemize}
+	\item We can then calculate bond \emph{energy} ($\Delta U = 461.0\dfrac{kJ}{mol}$) from $\Delta U^\circ = \Delta H^\circ - \Delta(PV)$
+\end{itemize}
+\section*{Temperature dependency of $\Delta H^\circ_{rxn}$}
+\begin{itemize}
+	\item What happens to $\Delta H^\circ_{rxn}$ if we carry out a reaction at a different temperature?
+	\item For an individual substance: $H_T^\circ = H^\circ_{298~K} + \int\limits_{298~K}^T C_P(T^\prime)\mathrm{d}T^\prime$
+	\item For a reaction: $\Delta H_{rxn,T}^\circ = \Delta H_{rxn, 295~K}^\circ + \int\limits_{298~K}^{T}\Delta C_P(T^\prime)\mathrm{d}T^\prime$
+	\item $\Delta C_P(T^\prime) = \sum\limits_{products}v_iC_{P,i}(T^\prime) - \sum\limits_{reactants}v_jC_{P,j}(T^\prime)$
+	\item Practice: Calculate $\Delta H_{rxn, 1450~K}^\circ$ for the reaction \ch{1/2 H2(g) + 1/2 Cl2(g) -> HCl(g)}
+	\begin{itemize}
+		\item $\Delta H^\circ_{rxn,298~K} = -92.3\dfrac{kJ}{mol}$
+		\item $C_p(\ch{H2 (g)}) = 29.064 -0.8363\times10^{-3}T\dfrac{1}{K} +20.111\times10^{-7}T^2\dfrac{1}{K^2}$
+		\item $C_p(\ch{Cl2 (g)}) = 31.695 -10.143\times10^{-3}T\dfrac{1}{K} -40.373\times10^{-7}T^2\dfrac{1}{K^2}$
+		\item $C_p(\ch{HCl (g)}) = 28.165 +1.809\times10^{-3}T\dfrac{1}{K} +15.464\times10^{-7}T^2\dfrac{1}{K^2}$
+		\item $\Delta C_p(Total) = -2.215-2.844\times10^{-3}T\dfrac{1}{K}+25.595\times10^{-7}T^2\dfrac{1}{K}$
+		\item $\Delta H^\circ_{rxn, 1450~K} = -95.1\dfrac{kJ}{mol}$
+		\item Analogy of water in tanks with different diameters. Water level is $T$, diameters are $C_P$
+	\end{itemize}
+\end{itemize}
+\section*{Calorimetry}
+\begin{itemize}
+	\item Coffee-cup calorimetry -- Used at constant $P$, so it gives $\Delta H$
+	\item Bomb calorimetry -- Used at constant $V$, so it gives $\Delta U$
+	\item Differential scanning calorimetry -- Used to study heat capacities and phase changes
+\end{itemize}
+
+\chapter{Entropy and the Second and Third Laws of Thermodynamics}
+\section*{Spontaneity and the Arrow of Time}
+\begin{itemize}
+	\item spontaneous compression demo
+	\item Processes can be classified as either spontaneous or non-spontaneous -- Give some examples
+	\item There is no law of nature which expressly forbids non-spontaneous processes, but they never observed in nature. This chapter will explore the reasons why
+\end{itemize}
+\section*{2nd Law of Thermodynamics}
+\begin{itemize}
+	\item Work can be completely converted into heat through, for example, use of a heating coil
+	\item Can heat be completely transferred into work? --{\large NO!}
+	\item Consider a Carnot cycle, composed of four steps (draw the $PV$ indicator diagram):
+	\begin{itemize}
+		\item Isothermal expansion at $T_{hot}$
+		\item Adiabatic expansion from $T_{hot}$ to $T_{cold}$
+		\item Isothermal compression at $T_{cold}$
+		\item Adiabatic compression from $T_{cold}$ to $T_{hot}$
+	\end{itemize}
+	\item Calculate the work and heat for each step
+	\begin{itemize}
+		\item Isothermal expansion -- $w = -nRTln\dfrac{V_B}{V_A}$ and $q = -w$ because $U$ depends only on T
+		\item Adiabatic expansion -- $q=0$ (adiabatic) and $w = \Delta U = C_V(T_{cold}-T_{hot})$
+		\item Isothermal compression -- $w = -nRTln\dfrac{V_D}{V_C}$ and $q = -w$
+		\item Adiabatic compression -- $q=0$ and and $w = \Delta U = C_V(T_{hot}-T_{cold})$
+	\end{itemize}
+	\item The adiabats cancel each other out, so the important differences come from the isotherms
+	\item Qualitatively, we see that more work is done during the expansion than during the compression
+	\item Since $\Delta U=0$, that means more heat is taken  during the expansion than during the compression
+	\item We can now begin to calculate the efficiency: $\varepsilon = \dfrac{-w_{cycle}}{q_{hot}} = \dfrac{q_{hot}+q_{cold}}{q_{hot}} = 1+\dfrac{q_{cold}}{q_{hot}}$
+	\item Evaluating the efficiency shows that there is always less work than heat drawn from the hot reservoir
+	\item 2nd Law -- A cyclic process cannot convert all the heat transfered into a system into an equal amount of work
+	\item Demonstrate sterling engine
+\end{itemize}
+\section*{Introducing Entropy}
+\begin{itemize}
+	\item Entropy is usually described as disorder or randomness -- what does this have to do with carnot cycles and heat engines?
+	\item Efficiency can be represented another way: $\varepsilon = 1-\dfrac{T_{cold}}{T_{hot}}$
+	\item Relating the temperature and heat versions of efficiency gives: $\dfrac{q_{hot}}{T_{hot}} + \dfrac{q_{cold}}{T_{cold}}=0$
+	\item This represents the discrete sum of parts around a Carnot cycle. Generalizing to any reversible cycle gives: $\oint\!\dfrac{\cancel{\mathrm{d}}q_{reversible}}{T}=0$
+	\item Since the cyclic integral is $0$, $\dfrac{\cancel{\mathrm{d}}q_{reversible}}{T}$ must the exact differential of a state function
+	\item We call this $S$, or entropy. $\mathrm{d}S = \dfrac{\cancel{\mathrm{d}}q_{reversible}}{T}$
+\end{itemize}
+\section*{Calculating Changes in Entropy}
+\begin{itemize}
+	\item For reversible adiabatic processes: $\Delta S = 0$
+	\item For cyclic processes: $\oint \mathrm{S} = 0$
+	\item For reversible isothermal processes: $\Delta S_T = nR\ln\dfrac{V_f}{V_i}$
+	\item For isochoric processes: $\cancel{\mathrm{d}}q_V=\mathrm{d} U_V = nC_{V,m}\mathrm{d}T$ so $\Delta S = nC_{V,m}\ln\dfrac{T_f}{T_i}$
+	\item For isobaric processes: $\cancel{\mathrm{d}}q_P=\mathrm{d} H_P = nC_{P,m}\mathrm{d}T$ so $\Delta S = nC_{P,m}\ln\dfrac{T_f}{T_i}$
+	\item For arbitrary state changes: $\Delta S = nC_{V,m}\ln\dfrac{T_f}{T_i} + nR\ln\dfrac{V_f}{V_i}$
+	\item For isobaric phase changes: $\Delta S = \dfrac{\Delta H_{change}}{T_{change}}$
+	\item For irreversible processes, find an equivalent reversible process and calculate $\Delta S_{reversible}$ instead. For example, an adiabatic expansion into vacuum is equivalent to an isothermal expansion (for an ideal gas)
+\end{itemize}
+\section*{Spontaneity and Entropy}
+\begin{itemize}
+	\item Imagine a hot metal block and cold metal block coming into thermal contact
+	\item Heat will flow, and $\Delta S_{universe} = \dfrac{q_{hot}}{T_{hot}}  + \dfrac{q_{cold}}{T_{cold}}$
+	\item Now, $q_{cold}=-q_{hot}$, so we know that $\Delta S_{universe} = q_{hot}\left(\dfrac{1}{T_{hot}}-\dfrac{1}{T_{cold}}\right)$
+	\item Since $\left(\dfrac{1}{T_{hot}}-\dfrac{1}{T_{cold}}\right) < 0$, we know that $\Delta S_{universe} < 0$ if heat flows into the hot block and $\Delta S_{universe} > 0$ if heat flows into the cold block
+	\item For all spontaneous processes, $\Delta S_{universe} \geq 0$
+\end{itemize}
+\section*{Clausius Inequality}
+\begin{itemize}
+	\item Consider the general differential form of the first law of thermodynamics: $\mathrm{d}U=\cancel{\mathrm{d}}q - P_{external}\mathrm{d}V$
+	\item Since $U$ is a state function, we could also consider the special case of a reversible pathway: $\mathrm{d}U=\cancel{\mathrm{d}}q_{reversible} - P\mathrm{d}V = T\mathrm{d}S - P\mathrm{d}V$
+	\item Set them equal to each other, and gather like terms on both sides: $T\mathrm{d}S - \cancel{\mathrm{d}}q = \left(P-P_{external}\right)\mathrm{d}V$
+	\item Now consider both spontaneous cases, i.e. $\left(P-P_{external}\right)>0$ and $\mathrm{d}V>0$, or $\left(P-P_{external}\right)< 0$ and $\mathrm{d}V <0$ -- In both cases, $T\mathrm{d}S-\cancel{\mathrm{d}}q > 0$
+	\item This leads to the Clausius Inequality: $\mathrm{d}S \geq \dfrac{\cancel{\mathrm{d}}q}{T}$ \hspace{1em} (Equal only for reversible processes)
+\end{itemize}
+\section*{Entropy of Surroundings and Systems}
+\begin{itemize}
+	\item In a non-isolated system, the ``system'' might undergo a non-spontaneous process
+	\item The $\Delta S_{surroundings}$ will always compensate for the $\Delta S_{system}$
+	\item $\Delta S_{surroundings} = \Delta U_{surroundings}$ for constant $V$, and $\Delta H_{surroundings}$ for constant $P$
+	\item For reversible processes, $\Delta S_{system} = - \Delta S_{surroundings}$
+	
+	~\newpage
+	
+	\item For irreversible processes, $\Delta S_{system} = \dfrac{q_{reversible}}{T}$
+	\begin{itemize}
+		\item Identify some reversible path from the initial to the final state (an adiabat followed by an isotherm can reach any point in $P$/$V$ space)
+		\item Calculate the heat for the reversible process to find $\Delta S_{system}$
+		\item Note that $\Delta S_{surroundings}$ still uses the actual heat from the irreversible pathway.
+	\end{itemize}
+	\item Practice: Adiabatic expansion into a vacuum. We know this is irreversible, but $q=0$ because it is adiabatic. Find $\Delta S_{surroundings}$, $\Delta S_{system}$, and $\Delta S_{universe}$ for an adiabatic expansion of $1~mole$ of gas at $298~K$ from $20~L$ to $60~L$
+\end{itemize}
+\chapter{Chemical Equilibrium}
+\section*{Gibbs and Helmholtz Energies}
+\begin{itemize}
+	\item Recall the Clausius inequality, which holds for all spontaneous processes: $T\mathrm{d}S\geq\cancel{\mathrm{d}}q$
+	\item We can replace $\cancel{\mathrm{d}}q$ with $\mathrm{d}U - \cancel{\mathrm{d}}w$
+	\item And replace $\cancel{\mathrm{d}}w$ with $-P_{external}\mathrm{d}V + \cancel{\mathrm{d}}w_{nonexpansion}$
+	\item Bring the internal energy over to the other side to give: $\mathrm{d}U - T\mathrm{d}S \leq -P_{external}\mathrm{d}V + \cancel{\mathrm{d}}w_{nonexpansion}$
+	\item Under isothermal conditions, $T\mathrm{d}S = \mathrm{d}(TS)$, so we can write:
+	
+	$\mathrm{d}(U-TS) \leq -P_{external}\mathrm{d}V + \cancel{\mathrm{d}}w_{nonexpansion}$	
+	\item Defining $U-TS$ as a new thermodynamic potential $A$ gives: $\mathrm{d}A\leq-P_{external}\mathrm{d}V + \cancel{\mathrm{d}}w_{nonexpansion}$
+	\item This is the Helmholtz energy, and its change is the maximum amount of work that a system can do under isothermal conditions (work on a system is negative)
+	\item Under isochoric conditions, and if nonexpansion work is not an option, then $\mathrm{d}A\leq 0$
+	\item However, we should instead consider the constraint of constant $P$, where $P\mathrm{d}V=\mathrm{d}(PV)$
+	\item This gives us: $\mathrm{d}(U+PV-TS)\leq\cancel{\mathrm{d}}w_{nonexpansion}$
+	\item Now remember that $U+PV = H$, so we have $\mathrm{d}(H-TS)\leq\cancel{\mathrm{d}}w_{nonexpansion}$
+	\item $H-TS$ might be familiar to you as the thermodynamic potential of Gibbs energy!
+	\item The condition for spontaneity is: $\mathrm{d}G - \cancel{\mathrm{d}}w_{nonexpansion}\leq0$
+	\item This means that the Gibbs energy is the maximum nonexpansion work a system can give under isothermal and isobaric conditions
+	\item In the case with no nonexpansion work, it is simply: $\mathrm{d}G\leq0$
+	\item Gibbs and Helmholtz energies give us rules for spontaneity that don't reference the path variable $\cancel{\mathrm{d}}q$
+	\item This leads to the familiar $\Delta G = \Delta H - T\Delta S$, and the new $\Delta A = \Delta U - T\Delta S$
+	\item How is spontaneity affected by temperature? Make a table for positive and negative $\Delta S$, $\Delta H$, and $\Delta U$
+	\item Fuel cell efficiency vs. Heat engine efficiency -- Entropy is important!
+\end{itemize}
+\section*{The Differential Forms of $U$, $H$, $A$, and $G$}
+\begin{itemize}
+	\item Recall our thermodynamic potentials:
+	\begin{itemize}
+		\item $U = $ Total internal energy
+		\item $H = U + PV$
+		\item $A = U-TS$
+		\item $G=H-TS=U+PV-TS$
+	\end{itemize}
+	\item And their differential forms are (where $P_{external}=P$):
+	\begin{itemize}
+		\item $\mathrm{d}U=T\mathrm{d}S-P\mathrm{d}V$
+		\item $\mathrm{d}H=T\mathrm{d}S-P\mathrm{d}V + P\mathrm{d}V + V\mathrm{d}P = T\mathrm{d}S+V\mathrm{d}P$
+		\item $\mathrm{d}A=T\mathrm{d}S-P\mathrm{d}V - T\mathrm{d}S - S\mathrm{d}T = -S\mathrm{d}T-P\mathrm{d}V$
+		\item $\mathrm{d}G= T\mathrm{d}S+V\mathrm{d}P - T\mathrm{d}S - S\mathrm{d}T = -S\mathrm{d}T+V\mathrm{d}P$
+	\end{itemize}
+	\item These expressions lead to the ``Natural Variables'' for each thermodynamic function
+	\item The partial derivatives of each thermodynamic function are just the other state variables. i.e. $\left(\dfrac{\partial U}{\partial S}\right)_V = T$
+	\item Since mixed partial derivatives are equal, we can derive the Maxwell relations:
+	\begin{itemize}
+		\item $\left(\dfrac{\partial T}{\partial V}\right)_S = -\left(\dfrac{\partial P}{\partial S}\right)_V$
+		\item $\left(\dfrac{\partial T}{\partial P}\right)_S = \left(\dfrac{\partial V}{\partial S}\right)_P$
+		\item $\left(\dfrac{\partial S}{\partial V}\right)_T = \left(\dfrac{\partial P}{\partial T}\right)_V = \dfrac{\beta}{\kappa}$
+		\item $-\left(\dfrac{\partial S}{\partial P}\right)_T = \left(\dfrac{\partial V}{\partial T}\right)_P = V\beta$
+	\end{itemize}
+\end{itemize}
+\section*{State Variable Dependence of $G$ and $A$}
+\begin{itemize}
+	\item Because our differential forms for the thermodynamic potentials are expressed only in terms of state variables, changing states becomes mathematically simple
+	\item $G(T,P) = G(T^\circ,P^\circ) + \int\limits_{P^\prime=P^\circ}^{P^\prime=P}\!V\mathrm{d}P^\prime + \int\limits_{T^\prime=T^\circ}^{T^\prime=T}\! -S\mathrm{d}T^\prime$	
+	\item $\int\limits_{P^\prime=P^\circ}^{P^\prime=P}\!V\mathrm{d}P^\prime \approx V\Delta P$ for solids and liquids, which are nearly incompressible
+	\item $\int\limits_{P^\prime=P^\circ}^{P^\prime=P}\!V\mathrm{d}P^\prime = nRT\ln\dfrac{P}{P^\circ}$ for an ideal gas under a reversible path
+	\item For a reaction we have:
+	
+	$\Delta G_{rxn}(T,P) = \Delta G_{rxn}(T^\circ,P^\circ) + \int\limits_{P^\prime=P^\circ}^{P^\prime=P}\!\Delta V_{rxn}\mathrm{d}P^\prime + \int\limits_{T^\prime=T^\circ}^{T^\prime=T}\! -\Delta S_{rxn}\mathrm{d}T^\prime$
+	\item $\Delta S_{rxn}$ is a function of $T$, so we will leave the temperature dependence for now
+	\item $\int\limits_{P^\prime=P^\circ}^{P^\prime=P}\!\Delta V_{rxn}\mathrm{d}P^\prime \approx \Delta V_{rxn}\Delta P$ For solids and liquids	
+	\item $\int\limits_{P^\prime=P^\circ}^{P^\prime=P}\!\Delta V_{rxn}\mathrm{d}P^\prime \approx \Delta nRT\ln\dfrac{P}{P^\circ}$ ideal gases under a reversible path
+	\item Consider the Haber–Bosch process: \ch{N2 + 3 H2 -> 2 NH3} 
+	
+	$\Delta G_{rxn,298~K}^\circ = -32.7 \dfrac{kJ}{mol}$, ~ and ~ $\Delta H_{rxn,298~K}^\circ = -92.0 \dfrac{kJ}{mol}$
+	\item Find $\Delta G_{rxn,298~K, 50~bar} = -52.1 \dfrac{kJ}{mol}$	
+	\item For temperature dependence, we can instead look at $\dfrac{\partial [\nicefrac{G}{T}]}{\partial T}$ without resorting to $S$
+	\item It can be shown that: 
+	
+	$\dfrac{\Delta G(T)}{T} = \dfrac{\Delta G(T^\circ)}{T^\circ}+\int\limits_{T^\prime=T^\circ}^{T^\prime=T}\!\Delta H\mathrm{d}\dfrac{1}{T^\prime} = \dfrac{\Delta G(T^\circ)}{T^\circ}+\Delta H\left(\dfrac{1}{T}-\dfrac{1}{T^\circ}\right)$
+	\item Find $\Delta G_{rxn,600~K, 50~bar} = -27.5 \dfrac{kJ}{mol}$
+\end{itemize}
+\section*{Composition and Chemical Potential}
+\begin{itemize}
+	\item So far we have only considered systems where the chemical composition is constant
+	\item The total differential of $G$ should include $\left(\dfrac{\partial G}{\partial n_1}\right)_{T,P,n_2,\ldots}\!\mathrm{d}n_1 + \left(\dfrac{\partial G}{\partial n_2}\right)_{T,P,n_1,\ldots}\!\mathrm{d}n_2 + \ldots$
+	\item We can simplify this by defining the \emph{chemical potential}: $\mu_i=\left(\dfrac{\partial G}{\partial n_i}\right)_{P,T,n_{j\neq i}}$
+	\item In fact, it can be shown that the Gibbs energy is the sum of the chemical potentials: $G=\sum \mu_in_i$
+	\item Example of hydrogen gas expanding into a chamber of nitrogen gas through a selectively permeable membrane:
+	\begin{itemize}
+		\item Equilibrium is achieved when $\mu_{\ch{H2}(pure)}=\mu_{\ch{H2}(mixture)}$, which is when the hydrogen partial pressures are equal
+		\item In analogy with $G$, we know that $\mu(T,P) = \mu^\circ(T,P^\circ) + nRT\ln\dfrac{P}{P^\circ}$
+		\item $\mu_{\ch{H2}(pure)}(T,P_{\ch{H2}})=\mu_{\ch{H2}(mixture)}(T,P_{\ch{H2}})= \mu^\circ_{\ch{H2}}(T,P^\circ)+nRT\ln\left(\chi_{\ch{H2}}\dfrac{P_{mixture}}{P^\circ}\right)$
+		\item $\mu_{\ch{H2}(mixture)}(T,P_{\ch{H2}})= \mu^\circ_{\ch{H2}}(T,P^\circ)+nRT\ln\dfrac{P_{mixture}}{P^\circ} + nRT\ln\chi_{\ch{H2}}$
+		\item $\mu_{\ch{H2}(mixture)}(T,P_{\ch{H2}})= \mu_{\ch{H2}}(T,P_{mixture}) + nRT\ln\chi_{\ch{H2}}$
+	\end{itemize}
+\end{itemize}
+
+\section*{Calculating $\Delta G_{rxn}$}
+\begin{itemize}
+	\item From Gen. Chem: $ \Delta G_{rxn}^\circ = \sum\limits_{products}v_i\Delta G_{f,i}^\circ - \sum\limits_{reactants} v_j\Delta G_{f,j}$
+	\item Recall also that: $\Delta G_{rxn} = \sum\limits_{products}v_i\mu_i - \sum\limits_{reactants} v_j\mu_j$, and that $\mu_i = \mu_i^\circ + RT\ln\dfrac{P_i}{P^\circ}$
+	\item Consider the reaction: \ch{a A + b B -> cC + dD}
+	\begin{itemize}
+		\item $\Delta G_{rxn} = c\mu_C^\circ+ cRT\ln\dfrac{P_C}{P^\circ} + d\mu_D^\circ+ dRT\ln\dfrac{P_D}{P^\circ} - a\mu_A^\circ- aRT\ln\dfrac{P_A}{P^\circ} - b\mu_B^\circ- bRT\ln\dfrac{P_B}{P^\circ}$
+		\item $\Delta G_{rxn} = \left(c\mu_C^\circ + d\mu_D^\circ- a\mu_A^\circ- b\mu_B^\circ\right) + RT\left(c\ln\dfrac{P_C}{P^\circ} + d\ln\dfrac{P_D}{P^\circ} - a\ln\dfrac{P_A}{P^\circ}- b\ln\dfrac{P_B}{P^\circ}\right)$
+		\item $\Delta G_{rxn} = \Delta G_{rxn}^\circ + RT\ln\left[\dfrac{\left(\dfrac{P_C}{P^\circ}\right)^c\left(\dfrac{P_D}{P^\circ}\right)^d}{\left(\dfrac{P_A}{P^\circ}\right)^a\left(\dfrac{P_B}{P^\circ}\right)^b}\right]$
+		\item Express $P$ in $bar$, where $P^\circ=1~bar$ so that all the standard pressures go away
+		\item Define $Q_P = \dfrac{P_C^cP_D^d}{P_A^aP_B^b}$ and you get $\Delta G_{rxn} = \Delta G_{rxn}^\circ + RT\ln Q_P$
+	\end{itemize}
+	\item If $Q_P<K_P$, then the reaction proceeds $\rightarrow$, and is spontaneous
+	\item If $Q_P>K_P$, then the reaction proceeds $\leftarrow$, and is non-spontaneous
+	\item If $Q_P=K_P$, then the reaction is at equilibrium with respect to $n_i$
+	\item Since the equilibrium condition is that $\Delta G_{rxn} =0$, we can say that $\Delta G_{rxn}^\circ = -RT\ln K_P$
+	\item This relation can be used to produce a Van't Hoff Plot: $\ln K = -\dfrac{\Delta G_{rxn}^\circ}{RT} = -\dfrac{\Delta H_{rxn}^\circ}{RT} + \dfrac{\Delta S_{rxn}^\circ}{R}$
+\end{itemize}
+\section*{Extent of reaction -- $\xi$}
+\begin{itemize}
+	\item $\xi$ is the number of moles that have advanced through a reaction
+	\item $n_i = n_i^\circ + v_i\xi$, and $\mathrm{d}n_i = v_i\mathrm{d}\xi$
+	\item Recall that $\mathrm{d} G = \sum \mu_i\mathrm{d}n_i$, so $\mathrm{d}n_i=\dfrac{\mathrm{d}G}{\sum \mu_i}$
+	\item $\dfrac{\mathrm{d}G}{\sum \mu_i}=v_i\mathrm{d}\xi$, which leads to $\left(\dfrac{\mathrm{d}G}{\mathrm{d}\xi}\right)=\sum v_i\mu_i$
+	\item This is a new way to identify spontaneity conditions	
+\end{itemize}
+\section*{Effect of $T$ and $P$ on $K$}
+\begin{itemize}
+	\item Temperature: $\ln K = -\dfrac{\Delta G_{rxn}^\circ}{RT} = -\dfrac{\Delta H_{rxn}^\circ}{RT} + \dfrac{\Delta S_{rxn}^\circ}{R}$
+	\begin{itemize}
+		\item For exothermic reactions, $K$ will decrease with increased $T$
+		\item For endothermic reactions, $K$ will increase with increased $T$
+	\end{itemize}
+	\item Pressure: $K$ stays the same, but $\xi$ may shift
+	\begin{itemize}
+		\item Consider the generic reaction quotient: $Q_P = \dfrac{P_C^cP_D^d}{P_A^aP_B^b}$
+		\item Because of the exponents, pressurizing or depressurizing all species equally may have a different effect on the numerator and denominator
+		\item $K_\xi = K_P\left(\dfrac{P}{P^\circ}\right)^{-\Delta v}$, where $\Delta v$ is the change in moles of gas
+		\item So a pressurization will shift the reaction toward the side with fewer moles of gas
+		\item A depressurization will shift the reaction toward the side with more moles of gas
+		\item The same idea applies for concentrations
+	\end{itemize}
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item Q6.13-6.18 -- Le Ch\^atelier's Principle
+	\item P6.4 -- Relating $K$ at different $T$s to $\Delta G_{rxn}$ and $\Delta H_{rxn}$
+	\item P6.7 -- Finding $\Delta G_{rxn}$ at different pressures
+	\item P6.10 -- Finding $K_P$ at different temperatures
+	\item P6.17 -- Calculate the chemical potential of a component in a mixture
+	\item P6.20 -- Calculate $\Delta G$ for an expansion
+	\item P6.24 -- More Van't Hoff Practice
+\end{itemize}
+\section*{Homework Solutions}
+2.5 points for each part, plus 2.5 points for participation = 40 points total
+\begin{itemize}
+	\item Q6.13 -- $P_{\ch{CO2}}$ will decrease as temperature increases
+	\item Q6.14 -- $P_{\ch{CO2}}$ will increase as pressure increases
+	\item Q6.15 -- $P_{\ch{CO2}}$ will decrease as \ch{Xe} is added at constant $P$ ($V$ will increase)
+	\item Q6.16 -- $P_{\ch{CO2}}$ will remain constant as \ch{Xe} is added at constant $V$
+	\item Q6.17 -- $P_{\ch{CO2}}$ will remain constant as a catalyst is added
+	\item Q6.18 -- $P_{\ch{CO2}}$ will decrease as \ch{O2} is removed
+	\item P6.4
+	\begin{itemize}
+		\item a -- $K=0.379$ at $700~K$ and $K=1.28$ at $800~K$
+		\item b -- $\Delta H_{rxn}^\circ = 56.7\dfrac{kJ}{mol}$ and $\Delta G_{rxn}^\circ(298.15~K)=35.0\dfrac{kJ}{mol}$
+		\item c -- $\Delta H_{rxn}^\circ = 58.1\dfrac{kJ}{mol}$ and $\Delta G_{rxn}^\circ(298.15~K)=36.3\dfrac{kJ}{mol}$. They are both just a little high
+	\end{itemize} 
+	\item P6.7 -- For graphite, $\Delta G_m = V_m\Delta P = 1.745~Lbar = 174 J$. For \ch{He}, $\Delta G_m = RT\ln\dfrac{P}{P^\circ}=14.3~kJ$, larger by 82 times!	
+	\item P6.10 -- $K_P(600~K) = 4.76\times10^6$
+	\item P6.17 -- $\mu_{\ch{O2}}^{mixture}=-S_{\ch{O2}}^\circ + RT\ln0.210 = -65.0\dfrac{kJ}{mol}$
+	\item P6.20 -- $\Delta G = nRT\ln\dfrac{P}{P^\circ}=-9.54~kJ$
+	\item P6.24
+	\begin{itemize}
+		\item a -- $\Delta H_{rxn}^\circ = -19.0\dfrac{kJ}{mol}$, $\Delta S_{rxn}^\circ = -22.06\dfrac{J}{mol~K}$, and $\Delta G_{rxn}^\circ(700^\circ C) = 3.03\dfrac{kJ}{mol}$
+		\item b -- $\chi_{\ch{CO2}} = 0.408$ and $\chi_{\ch{CO}} = 0.592$
+	\end{itemize}
+\end{itemize}
+\chapter{The Properties of Real Gases}
+\section*{Real Gas Equations of State}
+\begin{itemize}
+	\item We already discussed the van der Waals equation of state: $P=\dfrac{nRT}{V-nb}-\dfrac{n^2a}{V^2}$
+	\item There is also the Redlich-Kwong equation of state: $P=\dfrac{nRT}{V-nb}-\dfrac{n^2a}{\sqrt{T}V(V+nb)}$
+	\item Note that the values of $a$ and $b$ represent basically the same things in both equations of state, but will take slightly different values for a given gas
+	\item Figure 7.1 shows how the ideal gas law is unacceptable at room temperature
+	\item There are other, more complex equations of state, with increasing numbers of experimental parameters
+	\item The \emph{virial equation of state} is universal: $P=RT\left[\dfrac{1}{V_m}+\dfrac{B(T)}{V_m^2}+\dfrac{C(T)}{V_m^3}+\ldots\right]$
+	\item This equation can be extended to arbitrarily high orders for ever increasing accuracy, but in practice usually only the second virial coefficient is used
+	\item The second virial coefficient for a van der Waals gas is: $b - \left(\dfrac{a}{RT}\right)$
+	\item Figure 7.2 and Figure 7.3 -- Vapor pressure and the critical point
+	\item At the critical point, $d_g=d_l$
+\end{itemize}
+\section*{The Compression Factor}
+\begin{itemize}
+	\item The compression factor is defined as: $z=\dfrac{PV_m}{RT}$
+	\item It can also be understood as the deviation from ideal behavior: $z=\dfrac{V_m}{V_m^{ideal}}$
+	\item For low temperatures, $z<1$ at low pressures and $z>1$ at high pressures, while at high temperatures $z\geq1$ for all pressures
+	\item The temperature at which this behavior changes is called the \emph{Boyle temperature}: $T_B=\dfrac{a}{Rb}$
+	\item The Joule-Thompson inversion temperature is twice the Boyle Temperature
+\end{itemize}
+\section*{The Law of Corresponding States}
+\begin{itemize}
+	\item $V_c$ is related to $b$, and $T_c$ is related to $a$, so can we get an equation of state that relies only on critical constants?
+	\item Define relative state variables: $T_r=\dfrac{T}{T_c}$, $V_{mr}=\dfrac{V_m}{V_{mc}}$, and $P_r=\dfrac{P}{P_c}$
+	\item Now the van der Waals equation of state can be rearranged to:$P_r=\dfrac{8T_r}{3V_{mr}-1}-\dfrac{3}{V_{mr}^2}$
+\end{itemize}
+\section*{Fugacity and $K$}
+\begin{itemize}
+	\item Recall that for an ideal gas: $\mu(T,P)=\mu^\circ(T)+RT\ln\dfrac{P}{P^\circ}$
+	\item For a real gas we can write: $\mu(T,P)=\mu^\circ(T)+RT\ln\dfrac{f}{f^\circ}$
+	\item $f$ is the effective pressure that a real gas exerts. That is, the pressure mechanically exerted on the walls of a chamber is not the same as the effective pressure relevant to chemical interactions and equilibrium
+	\item Fugacity vs. pressure is similar to activity vs molarity in aqueous chemistry
+	\item We can show that $f=\gamma(P,T) P$, and $\gamma$ relates to the Boyle temperature just like $z$ does
+	\item For calculating the equilibrium state we have to actually use fugacity, but we can only directly measure pressures
+	\item Consider the reaction: \ch{3 H2 + N2 -> 2 NH3} \hspace{2em}$K_f=K_P\dfrac{\gamma_{\ch{NH3}}^2}{\gamma_{\ch{N2}}\gamma_{\ch{H2}}^3}$
+\end{itemize}
+\section*{Homework}
+For many of these homework problems you may need to refer to the tables in Appendix A (pp. 558-565)
+\begin{itemize}
+	\item Give the Boyle Temperature for the following gases: \ch{H2}, \ch{CH4}, \ch{NH3}, \ch{H2O}, and \ch{CCl4}
+	\item Consider a sample of ethene gas (\ch{C2H4}) at room temperature ($25^\circ C$) and ambient SUU pressure ($0.9~bar$):
+	\begin{itemize}
+		\item Using a van der Waals equation of state, find the molar volume of the ethene gas
+		\item Find the reduced state variables $T_R$, $V_{mR}$, and $P_R$ for the gas
+		\item Find the actual temperature, pressure, and molar volume of a sample of Argon gas in a corresponding state
+		\item Calculate the compression factor for both the ethene and the argon, to show that they are equal
+	\end{itemize}
+	\item Consider the conversion of carbon monoxide to carbon dioxide which occurs in catalytic converters: \ch{2 CO + O2 -> 2 CO2}
+	\begin{itemize}
+		\item A catalytic converter will start working at about $200^\circ C$. Calculate the equilibrium constant $K$ for this reaction at that temperature
+		\item Assuming ideal gas behavior ($K=K_P$), find the equilibrium pressure of \ch{CO} if $P_{eq,\ch{O2}}= 50~bar$ and $P_{eq,\ch{CO2}} = 150~bar$
+		\item Find the reduced pressures for each of the gases involved in this reaction based on this answer
+		\item Find the reduced temperature for each of the gases involved in this reaction at $200^\circ C$
+		\item Using Figure 7.11, estimate the fugacity coefficient $\gamma$ for each of the gases
+		\item Find $K_P$ assuming real gas behavior, which factors in fugacity ($K=K_f$)
+		\item Find the equilibrium pressure of \ch{CO} assuming real gas behavior, and compare the efficiency of a catalytic converter under real and ideal conditions
+	\end{itemize}
+\end{itemize}
+\section*{Homework Solutions}
+5 points for the first question, then 2.5 points for each subsequent section. Don't grade the last part, giving 30 points total
+\begin{itemize}
+	\item $T_{B,\ch{H2}} = 111~K$, $T_{B,\ch{CH4}} = 643~K$, $T_{B,\ch{NH3}} = 1370~K$, $T_{B,\ch{H2O}} = 2180~K$, and $T_{B,\ch{CCl4}} = 1880~K$
+	\item Ethene gas problem
+	\begin{itemize}
+		\item $V_m=27.41~L$
+		\item $T_R=1.060$, $V_{mR}=0.2091$, and $P_R=0.01785$
+		\item $T=159.9~K$, $V_m=10.24~L$, and $P=1.331~bar$
+		\item $Z_{\ch{C2H4}}=0.9952$, and $Z_{\ch{Ar}}=1.025$, which are only off in the tenths place
+	\end{itemize}
+	\item Catalytic converter problem
+	\begin{itemize}
+		\item $-RT\ln K = \Delta H_{rxn} - T\Delta S_{rxn}$, so $K=2.953\times10^{53}$
+		\item $P_{\ch{CO}, ideal}=3.904\times10^{-26}~bar$
+		\item $P_{R,\ch{CO2}} = 2.03$, $P_{R,\ch{CO}} = 0$, and $P_{R,\ch{O2}} = 0.99$
+		\item $T_{R,\ch{CO2}} = 1.56$, $T_{R,\ch{CO}} = 3.56$,  and $T_{R,\ch{O2}} = 3.06$
+		\item $\gamma_{\ch{CO2}} \approx 0.85$, $\gamma_{\ch{CO}} \approx1$, and $\gamma_{\ch{O2}} \approx 1.01$ 
+		\item $K_f = 0.715K_P$, so $K_P=1.40K_f = 4.128\times10^{53}$
+		\item $P_{\ch{CO}, real}=3.302\times10^{-26}$, so a converter works more efficiently in real conditions than in real conditions
+	\end{itemize}
+\end{itemize}
+\chapter{Phase Diagrams and the Relative Stability of Solids, Liquids, and Gases}
+\section*{Stability of the Phases}
+\begin{itemize}
+	\item Remember that $\mu$ governs the flow across a reaction arrow, changing $n$ for each of the products and reactants until they are in equilibrium
+	\item This is in analogy to how $P$ controls the change in $V$, changing until the pressures are equalized and in equilibrium
+	\item $\mu = \left(\dfrac{\partial G}{\partial n}\right)_{T,P}=G_m$
+	\item So, $\mathrm{d}\mu=\mathrm{d}G_m=-S_m\mathrm{d}T+V_m\mathrm{d}P$
+	\item From this we get $P$ and $T$ dependence of $\mu$: $\left(\dfrac{\partial \mu}{\partial T}\right)_P=-S_m$ and $\left(\dfrac{\partial \mu}{\partial P}\right)_T=V_m$
+	\item $S_m$ and $V_m$ are always positive, so $\mu$ will always decrease with increasing $T$ and increase with increasing $P$
+	\item We also know that $S_m^{gas}>S_m^{liquid}>S_m^{solid}$, so the slopes of $\mu$ vs $T$ will be different for each phase
+	\item Figure 8.1 and Figure 8.3 show the curves above, below and at the triple-point pressure
+	\item For each pressure, we have different phase change temperatures on these graphs
+	\item as the pressure changes, $\mu$ will change according to $V_m$, and we know that \emph{usually} $V_m^{gas}>V_m^{liquid}>V_m^{solid}$
+	\item Figure 8.2 Shows how each phase will respond to an incremental change in pressure
+\end{itemize}
+\section*{Pressure-Temperature Phase Diagrams}
+\begin{itemize}
+	\item A pressure-temperature phase diagram shows under what conditions a substance will exist in which phases (Figure 8.4)
+	\item Coexistence curves and the triple point show where multiple phases can exist in equilibrium
+	\item Drying vs. Boiling -- $P_{vap}=P_{ext}$ is the chemical definition of boiling
+	\item Critical point and supercritical fluids
+	\item Figure 8.7 and Figure 8.8 show how a phase change could be detected experimentally
+\end{itemize}
+\section*{The Phase Rule}
+\begin{itemize}
+	\item Although there are three relevant state variables ($T$, $P$, and $V$), we can describe the chemical potential and the state with any two of the three
+	\item This means that for a pure substance, there are generally 2 degrees of freedom
+	\item Along the coexistence lines between two phases, their chemical potentials must be equal to each other: $\mu_\alpha(T,P)=\mu_{\ch{H2}}\beta(T,P)$
+	\item This equality means that only one state variable is required ($T$ or $P$), and there is only one degree of freedom
+	\item At the triple point, all three phases are present and there are no degrees of freedom (there is only one unique point where this composition exists)
+	\item This leads to the phase rule, given as: $F=3-p$, or more generally $F=c-p+2$, where $c$ is the number of components and $p$ is the number of co-existent phases
+\end{itemize}
+\section*{Clapeyron Equation}
+\begin{itemize}
+	\item Since along a coexistence curve $\mu_\alpha(T,P)=\mu_{\ch{H2}}\beta(T,P)$, we also know that $\mathrm{d}\mu_\alpha = \mathrm{d}\mu_\beta$
+	\item $\mathrm{d}\mu = -S_m\mathrm{d}T + V_m\mathrm{d}P$, so this can simplify to: $\left(S_{m,\beta}-S_{m,\alpha}\right)\mathrm{d}T = \left(V_{m,\beta}-V_{m,\alpha}\right)\mathrm{d}P$
+	\item Which gives us the Clapeyron Equation: $\dfrac{\mathrm{d}P}{\mathrm{d}T}=\dfrac{\Delta S_m}{\Delta V_m}$
+	\item This relation allows us to calculate the slope of the coexistence curve
+\end{itemize}
+\section*{Vapor Pressure and the Clausius-Clapeyron Equation}
+\begin{itemize}
+	\item To find how the vapor pressure changes, consider the coexistence curves
+	\item We can rearrange the Clapeyron Equation and integrate: $\int\!\mathrm{d}P = \int\!\dfrac{\Delta S_m}{\Delta V_m}\mathrm{d}T$
+	\item For the s-l curve this gives: $\Delta P \approx \dfrac{\Delta H_{fusion}}{\Delta V_{fusion}}\dfrac{\Delta T}{T_i}$
+	\item For the l-g and s-g curves we assume that $\Delta V \approx V_{gas}$, and that the gas is ideal
+	\item l-g gives: $\ln\dfrac{P_f}{P_i} = -\dfrac{\Delta H_{vaporization}}{R}\left(\dfrac{1}{T_f}-\dfrac{1}{T_i}\right)$
+	\item s-g gives: $\ln\dfrac{P_f}{P_i} = -\dfrac{\Delta H_{sublimation}}{R}\left(\dfrac{1}{T_f}-\dfrac{1}{T_i}\right)$
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item Q8.1 -- $\mathrm{d}\mu$
+	\item P8.5 -- Interpreting P-T phase diagrams
+	\item P8.8 -- Melting point depression of water
+	\item P8.36 -- Clapeyron Equation
+\end{itemize}
+\section*{Homework Solutions}
+5 points for Q8.1 and P8.36, 10 points for P8.5 and P8.8 = 30 points total
+\begin{itemize}
+	\item Q8.1 -- Yes, it is reasonable because molar entropy is often pretty constant over the temperature ranges shown. Since molar entropy would increase with increasing temperature, the curvature would be concave downward.
+	\item P8.5 -- Some of these are hard to read accurately on the chart. Grade them generously.
+	\begin{itemize}
+		\item $5.11~atm<P<P_{critical}$		
+		\item $-56.6^\circ C < T < T_{critical}$
+		\item $T=-56.6^\circ C$ and $P=5.11~atm$
+		\item $-55^\circ C < T < 40^\circ C$
+		\item $P<5.11~atm$
+	\end{itemize}
+	\item P8.8
+	\begin{itemize}
+		\item $P=582~bar$
+		\item $P = 220~bar$
+		\item $\Delta T=-1.5^\circ C$
+		\item Not based on $\Delta T$, but there may be other factors at play (friction)
+	\end{itemize}
+	\item P8.36 -- $38.4 \dfrac{J}{mol~K}$ $16.4\dfrac{kJ}{mol}$
+\end{itemize}
+
+\chapter{Ideal and Real Solutions}
+\section*{Defining an Ideal Solution}
+\begin{itemize}
+	\item An ideal solution has no interactions between solute and solvent
+	\item Note that $\mu^*$ is for a pure substance, $\mu^\circ$ is for a standard state
+	\item Rault's law compares the vapor pressure of a mixture to that of a pure substance: $P_i=\chi_iP_i^*$
+	\item Rault's law is reliable in the limit of dilute solutions
+\end{itemize}
+\section*{Chemical Potential of a Solution and Vapor}
+\begin{itemize}
+	\item At equilibrium, $\mu^{solution} = \mu^{vapor}$
+	\item Remember that for a gas, $\mu^{vapor} = \mu^\circ + RT\ln\dfrac{P}{P^\circ}$
+	\item Substitute in Rault's law for the pressure and you get: $\mu^{solution} = \mu^*+RT\ln\chi$
+	\item We can also find the entropy and Gibbs energy of mixing: $\Delta G_{mix} = nRT\sum\limits_i\chi_iP\ln\chi_i$ and $\Delta S_{mix} = -nR\sum\limits_i\chi_iP\ln\chi_i$
+\end{itemize}
+
+\section*{Ideal Binary Solutions}
+\begin{itemize}
+	\item Binary solutions will have a total pressure which goes from $P_B^*$ to $P_A^*$ as $\chi_A$ increases (Figure 9.2)
+	\item In isobaric conditions, the mixture will be entirely liquid at pressures above the vapor pressure (Figure 9.3A)
+	\item In isobaric conditions, the mixture will be entirely vapor at pressures below the vapor pressure (Figure 9.3B)
+	\item Along the coexistence line, the compositions of the liquid and gas phases are different ($x_A$ vs $y_A$)
+	\item Define the average composition: $Z_A = \dfrac{n_A}{n_{total}} = \dfrac{n_A^{liquid}+n_A^{vapor}}{n_A^{liquid}+n_A^{vapor}+n_B^{liquid}+n_B^{vapor}}$
+	\item In the liquid region, $Z_A = x_A$ and in the vapor region $Z_A = y_A$, but along the coexistence line it gets more complicated
+	\item We can combine the curves from $P$ vs $x_A$ and $P$ vs $y_A$ on a chart with $Z_A$ (Figure 9.4)
+	\item Here we see that the coexistence region actually has 2 degrees of freedom, since Z can change as a second variable
+	\item The \emph{composition} of the two phases at a given $P$ and $Z_A$ can be found by drawing a horizontal tie line to the two curves
+	\item The relative amount in the two phases by the lever rule: $N_{total}^{liquid}\left(Z_A-x_A\right) = N_{total}^{vapor}\left(y_A-Z_A\right)$
+	\item Practice: Consider the benzene/toluene mixture shown in Figure 9.4
+	\begin{itemize}
+		\item If 1 mole of toluene is mixed with 2 moles of benzene, what is $Z_{benzene}$? -- $0.67$
+		\item What is the range of pressures where liquid and vapor phases coexist at this value of $X_{benzene}$? -- $55$ -- $75~torr$
+		\item At $P=60~torr$, give $x_{benzene}$ and $y_{benzene}$. -- $x_{benzene} = 0.45$ and $y_{benzene} = 0.73$
+		\item What percent of the total molecules are in the vapor phase? -- $77\%$
+		\item At higher pressures, which component of the mixture would be enriched relative to at $P=60~torr$? -- Benzene
+	\end{itemize}
+\end{itemize}
+
+\section*{Fractional Distillation}
+\begin{itemize}
+	\item Figure 9.6 shows a temperature-composition diagram, like the pressure-composition diagram before
+	\item The pathway marked on Figure 9.6 shows the stages of a fractional distillation
+	\begin{itemize}
+		\item At the boiling point, the more volatile component of the mixture is enriched in the vapor phase
+		\item That vapor is isolated and condensed to form a more concentrated liquid
+		\item This liquid now has a lower boiling point, and the process can be repeated
+		\item In the infinite limit, the liquid left behind is pure $B$ while the vapor at the top is pure $A$
+		\item Figure 9.7 shows a fractional distillation column
+	\end{itemize}
+	\item Non-idea solutions have either stronger self-interactions, or stronger cross-interactions
+	\begin{itemize}
+		\item Stronger cross-interactions lead to a maximum boiling point azeotrope (Figure 9.9A)
+		\item The top of a fractional distillation column may give pure $A$ or pure $B$, but the bottom will be stuck at the composition with maxiumum boiling point
+		\item Stronger self-interactions lead to a minimum boiling point azeotrope (Figure 9.9B)
+		\item The top of a fractional distillation column will be stuck at the composition of the minimum boiling point, but the bottom will end up with pure $A$ or pure $B$
+	\end{itemize}
+\end{itemize}
+
+\section*{The Gibbs-Duhem Equation}
+\begin{itemize}
+	\item We know that the vapor above a solution is in chemical equilibrium with the solution, and we can readily measure the chemical potential of a vapor using thermodynamic equations
+	\item We also know that the chemical potentials of two components in a solution are not independent
+	\item This allows us to find the potential of a non-volatile solute by relating it to the potential of the solvent vapor
+	\item $\mathrm{d}G = -S\mathrm{d}T + V\mathrm{d}P + \sum \mu_i\mathrm{d}n_i = \mu_1\mathrm{d}n_1 + \mu_2\mathrm{d}n_2$ for a binary mixture at constant $T$ and $P$
+	\item We also know that $G=\mu_1n_1 + \mu_2n_2$, so $\mathrm{d}G = \mu_1\mathrm{d}n_1 +n_1\mathrm{d}\mu_1 + \mu_2\mathrm{d}n_2 + n_2\mathrm{d}\mu_2$
+	\item Equating these two expressions for $\mathrm{d}G$ gives us: $n_1\mathrm{d}\mu_1 = -n_2\mathrm{d}\mu_2$
+\end{itemize}
+
+\section*{Colligative Properties}
+\begin{itemize}
+	\item Some properties of a solvent are changed based on the amount of solute
+	\item Remember colligative properties depend on the \emph{molality} of the solution, not its \emph{molarity}. This is because they depend on $\chi$
+	\item These properties are linked to the fact that chemical potential of a solution is less than that of a pure substance
+	\item Freezing point depression and boiling point elevation
+	\begin{itemize}
+		\item $\mu^*_{solid} = \mu_{solution} = \mu^*_{solvent}+RT\ln\chi_{solvent}$
+		\item $\ln\chi_{solvent} = \dfrac{\mu^*_{solid}-\mu^*_{solvent}}{RT} = \dfrac{-\Delta G_fusion}{RT}$
+		\item Evaluating the total differential of this equation and translating $\chi$ into molality yields:
+		
+		$\Delta T_{freezing}=-\dfrac{RM_{solvent}T_{fusion}^2}{\Delta H_{fusion}}m_{solute} = -K_{freezing}m_{solute}$
+		\item Applying similar analysis to boiling point elevation yields:
+		
+		$\Delta T_{boiling}=\dfrac{RM_{solvent}T_{boiling}^2}{\Delta H_{vaporization}}m_{solute} = -K_{boiling}m_{solute}$
+		
+	\end{itemize}
+	\item Osmotic pressure -- $\pi=\dfrac{n_{solute}RT}{V}$
+\end{itemize}
+
+\section*{Deviations from Rault's Law}
+\begin{itemize}
+	\item Solute vapor pressure deviates significantly from Rault's law at low concentrations
+	\item Henry's law describes the proportional relationship between vapor pressure and $\chi_{solute}$
+	\item $P_A = \chi_Ak_A$ where $k_A$ is the Henry's law constant for substance $A$
+	\item An ideal dilute solution will have a solvent which follows Rault's law, and a solute which follows Henry's law	
+	\item Figure 9.16 Shows the transition from Henry's to Rault's law	
+\end{itemize}
+
+\section*{Miscibility of Liquids}
+\begin{itemize}
+	\item Two liquids are fully miscible if they will mix in all ratios
+	\item Partially miscible liquids will form two phases, each dominantly composed of one component
+	\item Figure 9.24 Shows a complete phase diagram for a mixture of partially miscible liquids 
+\end{itemize}
+
+\section*{Solid-Solution Equilibrium}
+\begin{itemize}
+	\item When a mixture freezes, each of the two components will freeze out as a pure solid
+	\item As the mixture freezes, only one component will freeze out, concentrating the other component in the remaining liquid phase and depressing the freezing point
+	
+	$\dfrac{1}{T_{fusion}} = \dfrac{1}{T^\circ_{fusion}}-\dfrac{R\ln\chi_{solvent}}{\Delta H_{fusion}}$
+	\item Eventually, the eutectic point is reached, which is the composition with minimum freezing temperature. At this point both components will freeze out together
+	\item T-$\chi$ phase diagrams for the solid-liquid coexistence region 
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item Q9.1 -- Boiling point elevation and freezing point depression
+	\item Q9.2 -- Fractional Distillation
+	\item P9.2 -- Activity in non-ideal solutions
+	\item P9.7 -- Osmotic pressure
+	\item P9.19 -- $P$-$\chi$ diagrams and ideal solutions
+	\item P9.25 -- Molecular weight from vapor pressure
+	\item For this question, refer to Figure 9.4. 4 moles of benzene are mixed with 6 moles of toluene at a pressure of $45~torr$
+	\begin{itemize}
+		\item What are $y_{benzene}$ and $x_{benzene}$?
+		\item Which component is enriched in the vapor phase? In the liquid phase?
+		\item What fraction of the molecules are in the vapor phase and liquid phase?
+	\end{itemize}
+	\item For this question, refer to Figure 9.23. 2 moles of nicotine are mixed with 1 mole of water at a temperature of $100^\circ C$
+	\begin{itemize}
+		\item Approximate the value of $x_{nicotine}$ in the two phases
+		\item Approximate what fraction of the molecules are in each of the two phases
+	\end{itemize}
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item Q9.1 -- The slope of $\mu$ vs $T$ is much steeper for a gas than for a solid, making the crossing point between $\mu_l$ and $\mu_g$ less sensitive to a shift in $\mu_l$
+	\item Q9.2 -- A maximum boiling point azeotrope will leave a mixed liquid phase and a pure vapor phase. A minimum boiling point azeotrope would be the opposite
+	\item P9.2 -- $\alpha_A = 0.489$, $\gamma_A = 1.58$, $\alpha_B = 1.00$, and $\gamma_B = 1.45$
+	\item P9.7 -- $C = 1.45\times10^3\dfrac{g}{mol}$
+	\item P9.19 -- $P^*_A = 0.874~bar$, and $P^*_B = 0.608~bar$
+	\item P9.25 -- $M = 123\dfrac{g}{mol}$
+	\item Benzene/Toluene problem -- Since these are based on a figure, allow $\pm 0.1\%$ 
+	\begin{itemize}
+		\item $y_{benzene} = 0.5$ and $x_{benzene} = 0.2$
+		\item Benzene is enriched in the vapor phase, and toluene is enriched in the liquid phase?
+		\item $\nicefrac{1}{3}$ of the molecules are in the liquid phase, and $\nicefrac{2}{3}$ are in the vapor phase.
+	\end{itemize}
+	\item Nicotine problem -- Since these are based on a figure, allow $\pm 0.1\%$ 
+	\begin{itemize}
+		\item $x_{nicotine} = 0.7$ in $L_2$ and $0.3$ in $L_1$
+		\item About $\nicefrac{9}{10}$ of the molecules are in $L_2$, while $\nicefrac{1}{10}$ are in $L_1$
+	\end{itemize}
+\end{itemize}
+\chapter{Electrolyte Solutions}
+\section*{Thermodynamic Quantitites of Electrolytes}
+\begin{itemize}
+	\item Electrolyte solutions are very non-ideal because the coulombic interactions of ions are very long range compared to van Der Walls interactions of neutral solutes
+	\item Each ion is surrounded by many solvation shells, dramatically changing the energy and stability of the ion
+	\item $\Delta H_{rxn}^\circ$ for \ch{1/2 H2(g) + 1/2 Cl2(g) -> H^+(g) + Cl^-(g)} will be very different from $\Delta H_{rxn}^\circ$ for \ch{1/2 H2(g) + 1/2 Cl2(g) -> H^+(aq) + Cl^-(aq)}
+	\item Just like we defined elements as having $\Delta H^\circ_f = 0$ and $\Delta G^\circ_f =0$, we find it convenient to simlarly define $\Delta G^\circ_f = \Delta H^\circ_f = \Delta S^\circ_f = 0$ for \ch{H^+(aq)}
+	\item This is like the arbitrary designation of sea level as an elevation of $0$
+	\item Now we can find the thermodynamic quantities of counter-ions like \ch{Cl^-(aq)} above: $\Delta H^\circ_f(\ch{Cl^-, aq}) = \Delta H^\circ_{rxn}$
+	\item These quantities are called ``conventional formation'' enthalpies, Gibbs energies, and entropies
+\end{itemize}
+\section*{Activities of Electrolytes}
+\begin{itemize}
+	\item The ideal dilute solution for neutral solutes does not apply to electrolyte solutions
+	\item We can define the mean ionic chemical potential as: $\mu_\pm = \dfrac{v_+\mu_+ + v_-\mu_-}{v}$ where $v_+$ and $v_-$ are the stoichiometric amounts of the cation and ion in one formula unit, and $v=v_+ + v_-$
+	\item We cannot measure $\mu_+$ or $\mu_-$, but we can measure $\mu_\pm$
+	\item We can also define the mean ionic activity: $a_\pm = \left(a_+^{v_+}a_-^{v_-}\right)^{\nicefrac{1}{v}}$
+	\item And finally, the non-standard mean ionic chemical potential, which takes a now-familiar form: $\mu_\pm = \mu^\circ_\pm + RT\ln a_\pm$
+	\item Now, activity for ionic solutions is: $a_\pm = \gamma_\pm \left(\dfrac{m_\pm}{m^\circ}\right)$
+\end{itemize}
+\section*{Calculating $\gamma_\pm$ Using Debye-H\"uckel Theory}
+\begin{itemize}
+	\item The presence of ions in solution creates an electric field in the environment directly around any ions
+	\item In Debye-H\"uckel Theory, that electric field is damped more abruptly than in vacuum due to two factors:
+	\begin{itemize}
+		\item Solvent dielectric effect
+		\item Other ions (counter-ions) in solution
+	\end{itemize}
+	\item $\kappa$, the Debye-H\"uckel screening length, describes how rapidly the electric field decays: 
+	
+	$\dfrac{\phi_{solution}(r)}{\phi_{isolated ion}(r)}=e^{-\kappa r}$
+	\item $\kappa$, and therefore $\gamma_\pm$ depend on the ionic strength: $I = \dfrac{1}{2}\sum\limits_{i=ion}m_iz_i^2$
+	\item Solve for $I$ for a $0.5~m$ solution of \ch{NaCl} and a $1.2~m$ solution of \ch{Ca(OH)2}
+	\item The Debye-H\"uckel limiting law can give the activity coefficient for any solvent, but it is unwieldy and uses empirical parameters like $\varepsilon_r$
+	\item For water at $298.15~K$, this law reduces to: $\log\gamma_\pm = -0.5092\left|z_+z_-\right|\sqrt{I}$
+	\item Figure 10.6 compares this law to data, showing that it works well only in the dilute limit
+	\item The Davies equation attempts to improve the Debye-H\"uckel limiting law empirically:
+	
+	$\log\gamma_\pm = -0.5092\left|z_+z_-\right|\left[\dfrac{\left(\dfrac{I}{m^\circ}\right)^{\nicefrac{1}{2}}}{1+\left(\dfrac{I}{m^\circ}\right)^{\nicefrac{1}{2}}}-0.30\dfrac{I}{m^\circ}\right]$
+\end{itemize}
+\section*{Chemical Equilibrium in Electrolyte Solutions}
+\begin{itemize}
+	\item Electrolyte solutions can be buffered with a soluble salt so that the ionic strength is known and constant
+	\item To solve for concentrations when the only ions are in equilibrium, we must use an iterative approach:
+	\begin{itemize}
+		\item Find the concentrations based on an ideal solvent ($\gamma_\pm = 1$)
+		\item Use these concentrations to find the real $\gamma_\pm$
+		\item Resolve for the concentrations using the value of $\gamma_\pm$
+		\item Check to see if $\gamma_\pm$ has changed significantly, and repeat if necessary
+	\end{itemize}
+	\item Solve for the molal solubility of salts in table 10.4 using this approach
+	\item Since real activity coefficients have a minimum, this leads to interesting effects, such as ``salting in'' and ``salting out''. This is dissolving or precipitating a marginally soluble solute by buffering the ionic strength
+\end{itemize}
+\section*{Homework Problems}
+\begin{itemize}
+	\item P10.13 -- Calculating ionic strength
+	\item P10.14 -- Calculating activity coefficients
+	\item P10.17 -- Solubility and salt buffers
+	\item P10.7 -- Equilibrium with non-ideal electrolytes
+	\item P10.23 -- Debye-H\"uckel screening length
+	\item Repeat Problem P10.14, only this time use the Davies equation rather than the Debye-H\"uckel limiting law. How does this compare to your answer above?
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item P10.13 -- $I = 0.321\dfrac{mol}{kg}$
+	\item P10.14 -- $I = 0.072 \dfrac{mol}{kg}$, $\gamma_\pm = 0.389$, and $\alpha_\pm = 0.0106$
+	\item P10.14 -- (Alternative Answer) $I = 0.072 \dfrac{mol}{kg}$, $\gamma_\pm = 0.389$, $\alpha_+ = 0.0140$, and $\alpha_- = 0.00467$
+	\item P10.17 -- a:$6.28\times10^{-5}\dfrac{mol}{kg}$ \hspace{2em}b:$1.22\times10^{-5}\dfrac{mol}{kg}$
+	\item P10.7 -- $0.15~m$: $1.13\%$ \hspace{2em} $1.5~m: 0.372\%$ \hspace{2em} Ideal $0.15~m$: $1.07\%$ \hspace{2em} Ideal $1.5~m: 0.341\%$
+	\item P10.23 -- $l = 1.4~nm$
+	\item Repeat Problem P10.14 -- $\gamma_\pm = 0.512$, and $\alpha_\pm = 0.0140$
+	\item Repeat Problem P10.14 -- (Alternative Answer) $\gamma_\pm = 0.512$, $\alpha_+ = 0.0184$, and $\alpha_- = 0.00614$
+\end{itemize}
+
+\chapter{Electrochemical Cells, Batteries, and Fuel Cells}
+\section*{Chemical Potential in Electric Fields}
+\begin{itemize}
+	\item When a voltage is across two electrodes, charges will flow until there is a counter-potential established at the electrode-solution interface
+	\item If there are no electrochemical reactions available, charges will cease to flow and the circuit will be broken
+	\item The amount of work required to move an ion across a potential is: $\cancel{\mathrm{d}}w_{rev}=(\phi_2-\phi_1)\mathrm{d}Q = -\phi zF\mathrm{d}n$
+	\item This is non-expansion work, which is also $\mathrm{d} G$, and $\mathrm{d}G = \tilde{\mu}_2\mathrm{d}n - \tilde{\mu}_1\mathrm{d}n$
+	\item Now $\tilde{\mu}$ is the electrochemical potential: $\tilde{\mu} = \mu + z\phi F$
+	\item So: $\tilde{\mu}_2=\tilde{\mu}_1+z\phi F$
+\end{itemize}
+\section*{Electrochemical Cells}
+\begin{itemize}
+	\item Since we cannot measure the electrochemical potential of a lone electrode, or use one for work, we pair two electrodes to form an electrochemical cell
+	\item In order to control the flow of electrons (and force them through a wire), we physically separate the two electrodes into two half-cells
+	\item The half-cells must be connected by a salt bridge, which completes the current by releasing ions of the proper charge into each half-cell
+	\item Potentials can be measured on an absolute scale, relative to the vacuum (The potential of an isolated electron in vacuum), but usually we measure potentials relative to a reversible hydrogen electrode (RHE)
+	\item The RHE has an absolute potential of $-4.44\pm0.02~V$, but we define is as a relative standard with $\phi^\circ=0$
+	\item The cathode is where reduction occurs, and the anode is where oxidation occurs
+	\item Understand the direction of flow of electrons and all ions
+\end{itemize}
+\section*{The Nernst Equation and Cell Potentials}
+\begin{itemize}
+	\item The total reversible non-expansion work for an electrochemical cell is:
+	
+	$\Delta G_R = -nF\Delta\phi = -nFE$
+	\item But we also know that $\Delta G=\Delta G^\circ+RT\ln Q$, so $-nFE=\Delta G^\circ + RT\ln Q$
+	\item Which simplifies to the Nernst equation:
+	
+	$E=E^\circ-\dfrac{RT}{nF}\ln Q = E^\circ - \dfrac{0.05916}{n}\log Q$ for $T=298.15~K$
+	\item The Nernst equation can be applied to either the complete cell, or to each half-cell individually
+	\item The total cell potential is related to the half-cell potentials by: $E_{cell} = E_{reduction} + E_{oxidation}$
+	\item If you use only \emph{reduction} potentials it becomes: $E_{cell} = E^{reduction}_{cathode}-E^{reduction}_{anode}$
+\end{itemize}
+\section*{Electrochemical Potential and Thermodynamics}
+\begin{itemize}
+	\item We can find the entropy for a reversible redox reaction by: $\Delta S^\circ_R = nF\left(\dfrac{\partial E^\circ}{\partial T}\right)_P$
+	\item The equilibrium constant can be found by: $E^\circ = \dfrac{RT}{nF}\ln K$
+	\item Table 11.3 gives an electrochemical series
+\end{itemize}
+\section*{Different Types of Cells and Applications}
+\begin{itemize}
+	\item Batteries -- Produce a voltage
+	\item Electrolytic cells -- Drive a non-spontaneous electrochemical reaction
+	\item Fuel cells -- Produce a voltage (Figure 11.15)
+	\item Maximum work from a heat engine: $-\Delta H\left(\dfrac{T_H-T_C}{T_H}\right)$
+	\item Maximum work from a battery or fuel cell: $-\Delta G = -\Delta H\left(1-\dfrac{T\Delta S}{\Delta H}\right)$
+	\item Comparing a common reaction at $T=300~K$ yields over threefold more work through electrochemistry compared to a heat engine
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item P11.11 -- Calculate $E$, $K$, and $\Delta G_R$ for an electrochemical cell
+	\item P11.20 -- Electrochemical potentials
+	\item P11.25 -- Hydronium activity from electrochemical measurements
+	\item P11.29 -- Calculate solubility product from electrochemical potentials
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item P11.11 -- $E = 1.154~V$,  $K = 6.61\times10^{35}$, and $\Delta G_R = 204.5\dfrac{kJ}{mol}$
+	\item P11.20 -- $E = -0.913~V$
+	\item P11.25 -- $\alpha_{H^+} = 4.16\times10^{-4}$
+	\item P11.29 -- $K_{SP} = 4.90\times10^{-13}$
+\end{itemize}
+
+\chapter{Probability}
+\section*{The Importance of Probability}
+\begin{itemize}
+	\item Any macroscopic system has a huge number of particles ($10^{23}$ or so)
+	\item With so many particles, there is NO chance that they are all in the same quantum state -- The energy is distributed unevenly between the particles
+	\item This convergence of quantum mechanics and thermodynamics is governed by probability and is called statistical mechanics	
+\end{itemize}
+\section*{Basic Probability}
+\begin{itemize}
+	\item Probability is the number of states with a given property divided by the total number of possible states
+	
+	$P_i = \dfrac{N_i}{N_{total}}$
+	\item Figure 12.1 -- Analyzing 4 flips of a coin
+	\item Permutations:
+	\begin{itemize}
+		\item Permutations are unique ways to order a number of unique objects
+		\item $P(n,j) = \dfrac{n!}{(n-j)!}$ where $n$ is the total number of objects and $j$ are the number selected
+		\item Practice: How many 4-letter words with no letter repeats are there? A:$\dfrac{26!}{22!} = 35880$
+	\end{itemize}
+	\item Combinations or Configurations:
+	\begin{itemize}
+		\item Combinations are \emph{unordered} groups of unique objects
+		\item $C(n,j) = \dfrac{n!}{j!(n-j)!}$ where $n$ is the total number of objects and $j$ are the number selected
+		\item Practice: How many 4-letter combinations are there? A:$\dfrac{26!}{4!22!}=1495$
+	\end{itemize}
+\end{itemize}
+\section*{Applying Probability}
+\begin{itemize}
+	\item With many trials or many particles, the probabilities approach a smooth continuum
+	\item These probabilities can be represented by a probability distribution: Figure 12.5
+	\item Integrating under a probability distribution gives the probability within a given range
+	
+	$P(x)\mathrm{d}x = \dfrac{f(x)\mathrm{d}x}{\int\! f(x)\mathrm{d}x}$ -- Note the normalization in the denominator
+	\item Variance is the width of the probability distribution: $\sigma^2 = \avg{(x-\avg{x})^2}$
+	\item Practice: A very special dartboard has a radius of 1 foot. The score given is linear with respect to radius, with 10 points in the center and 1 point on the very edge. Assume that the thrower is unskilled and each point on the dartboard is equally likely to be hit.
+	\begin{itemize}
+		\item What is the probability of hitting the center with $r\leq 6~in$? A: $\nicefrac{1}{2}$
+		\item What is the probability of hitting the outside with $r\geq 6~in$?A: $\nicefrac{3}{4}$
+		\item What is the average score per dart in the limit of infinite throws? A: $4$
+		\item What is the variance in score per dart? A: $1.14$
+	\end{itemize}
+\end{itemize}
+\section*{Homework Problems}
+\begin{itemize}
+	\item P12.3 -- Basic Probabilities
+	\item P12.7 -- Probabilites of Isotopes
+\end{itemize}
+\section*{Homework Solutions} -- 10 points for each for 20 points total
+\begin{itemize}
+	\item P12.3 -- a. $\nicefrac{1}{6}$ b. $\nicefrac{1}{9}$ c. $\nicefrac{21}{36}$
+	\item P12.7 -- a. $0.372$ b. $0.569$
+\end{itemize}
+
+\chapter{The Boltzmann Distribution}
+\section*{Microstates}
+\begin{itemize}
+	\item Microstates are configurations of molecules in certain energy states. Each microstate is equally probable
+	\item Figure 13.2 shows microstates which distribute 3 units of energy between 3 particles
+	\item Total probabilities of being in the energy states are: $P_0=\dfrac{12}{30}$, $P_1=\dfrac{9}{30}$, $P_2=\dfrac{6}{30}$, $P_3=\dfrac{3}{30}$
+	\item Since molecules are indistinguishable, those microstaes can be grouped into similar combinations
+	\item The dominant configuration is the one with most microstates
+	\item The macroscopic properties will be determined by the dominant configuration, and will be unchanging at equilibrium
+\end{itemize}
+\section*{The Boltzmann Distribution}
+\begin{itemize}	
+	\item With larger numbers of molecules and more total energy, the number of microstates becomes unmanageably large
+	\item Rather than try to draw microstates and count probabilites, we need a function to describe the probability of being in a particular energy state
+	\item This function is the Boltzmann distribution: $P_i = \dfrac{g_ie^{-\frac{E_i}{k_BT}}}{\sum\limits_j g_je^{-\frac{E_j}{k_BT}}}$
+	\item Here, $g_i$ is the quantum degeneracy of an energy level, and $E_i$ is its energy
+	\item $k_BT$ represents the average thermal energy available at a given temperature, and must match units with $E_i$
+	\item Temperature is only a valid indicator of average energy if the system is in thermal equilibrium. Light, in particular, can upset the distribution of energy states through excitations
+	\item The denominator is a normalization factor called the ``partition function''
+\end{itemize}
+\section*{Applying the Boltzmann Distribution}
+\begin{itemize}
+	\item Gas velocities:
+	\begin{itemize}
+		\item Consider the translational energy of a gas molecule: $E_{kinetic} = \dfrac{1}{2}mv^2$
+		\item $P(v) = \dfrac{e^{-\frac{mv^2}{2k_BT}}}{\int\! e^{-\frac{mv^2}{2k_BT}} \mathrm{d}v}$
+	\end{itemize}
+	\item Diatomic rigid rotor rotations:
+	\begin{itemize}
+		\item Rotational energy is: $E_J=BJ(J+1)$
+		\item Rotational state degeneracy is: $g_J = 2J+1$
+		\item $P(J) = \dfrac{(2J+1)e^{-\frac{BJ(J+1)}{k_BT}}}{\sum\limits_{J^\prime=0,1,2,\ldots} (2J^\prime+1)e^{-\frac{BJ^\prime(J^\prime+1)}{k_BT}}}$
+	\end{itemize} 
+\end{itemize}
+\section*{Homework Problems}
+\begin{itemize}
+	\item P13.8 -- Boltzmann distribution and continuous energy levels
+	\item P13.10 -- Boltzmann distribution and discrete energy levels
+	\item P13.12 -- Microstates and non-Boltzmann configurations
+	\item P13.16 -- Calculating the partition function
+	\item P13.22 -- Population ratios in vibrational energy states
+	\item P13.29 -- Electronic state probabilities at different temperatures	
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item P13.8 -- $P_{\ch{N2}}=0.230~atm$, and $P_{\ch{O2}}=0.052~atm$
+	\item P13.10 -- a: $T=250~K$ b: $T=180~K$
+	\item P13.12 -- a: $E=500~cm^{-1}$, and $W=1287$ b: $E=500~cm^{-1}$, and $W=2860$ c: $E=500~cm^{-1}$, and $W=858$. Only configuration b conforms to a Boltzmann distribution   
+	\item P13.16 -- $Z=1.28$, and $Z=5.80$
+	\item P13.22 -- $T=432~K$
+	\item P13.29 -- $P=0.149$ at $T=100~K$, $P=0.414$ at $T=500~K$, and $P=0.479$ at $T=2000~K$
+\end{itemize}
+
+\chapter{Ensemble and Molecular Partition Functions}
+\section*{Partition Functions}
+\begin{itemize}
+	\item The Boltzmann Distribution gives the probability that a single molecule will be in a particular given energy state
+	\item To understand the properties of groups of molecules, we must treat the molecules of a system as a \emph{canonical} ensemble
+	\item The canonical ensemble breaks a system down into small chunks which each have constant $T$, $V$, and $N$
+	\item Other ensembles work better under certain circumstances, but we are only concerned with the canonical ensemble
+	\item The normalization factor we will use is called the canonical partition function:
+	
+	$Q = \sum e^{-\frac{E_i}{k_BT}} = \sum e^{-\beta E_i}$
+	\item This includes every energy state of every member of the ensemble, so it is not practical to calculate in this way
+	\item The canonical partition function for the complete ensemble can be related to the partition function for each member ``chunk'' of the ensemble: $Q=q^N$ for distinguishable units (like in a solid), and $Q=\dfrac{q^N}{N!}$ for indistinguishable units (like in a gas)
+	\item It is convenient to make unit size be a single molecule. so that we can calculate the molecular partition function $q$ based on molecular energy states
+	\item We combine different energetic degrees of freedom (translation, rotation, vibration, electronic, etc.) by taking the product of $q$ for each of them. i.e. $q_{total} = q_Tq_Rq_Vq_E$
+\end{itemize}
+\section*{Translations}
+\begin{itemize}
+	\item Recall that for molecular translation the quantum energy levels are particle in a box levels
+	\item $E_n = \dfrac{h^2n^2}{8ml^2}$, so $q_T=\sum\limits_n e^{-\frac{\beta h^2n^2}{8ml^2}}$
+	\item This is an infinite sum, which must be carried VERY far to converge because the translational states are so low in energy
+	\item We can assume that there is a continuum of states and integrate instead:
+	
+	$q_T=\int\limits_0^\infty\!e^{-\beta\alpha n^2}\mathrm{d}n$ where $\alpha = \dfrac{h^2}{8ml^2}$
+	\item Evaluating this integral gives: $q_T=\dfrac{1}{2}\sqrt{\dfrac{\pi}{\beta\alpha}}=l\sqrt{\dfrac{2\pi m}{h^2\beta}}$
+	\item This solution gives us the thermal de Broglie wavelength: $\Lambda = \sqrt{\dfrac{h^2\beta}{2\pi m}}$ and $q_T=\dfrac{l}{\Lambda}$
+	\item These solutions are for one dimension. Simply cube it for three dimensions: $q_{T,3D}=\dfrac{V}{\Lambda^3}$
+	\item $q_{T,3D}$ is very large because of the closely-spaced translational energy levels
+\end{itemize}
+\section*{Rotations}
+\begin{itemize}
+	\item For rotations we have the rigid rotor model
+	\item $E_J=hcBJ(J+1)$ (for $B$ in $cm^{-1}$) and $g_J = (2J+1)$
+	\item $q_R = \sum\limits_J(2J+1)e^{-\beta hcBJ(J+1)}$
+	\item At room temperature, $\dfrac{1}{\beta}=207~cm^{-1}$, while Table 14.1 shows values of $B$ which are always much lower
+	\item So again, we can treat the rotational states as a continuum (not as solid an approximation as for translations, but still acceptable)
+	\item Evaluating this integral gives: $q_R=\dfrac{1}{\beta hcB}=\dfrac{k_BT}{hcB}$
+	\item Rotational symmetry causes rotational microstates to be indistinguishable, requiring an additional \emph{symmetry number} in the equation
+	
+	$q_R=\dfrac{1}{\sigma\beta hcB}=\dfrac{k_BT}{\sigma hcB}$
+	\item $\sigma$ is the number of equivalent rotations. $\sigma = 2$ for a diatomic, $\sigma = 3$ for ammonia, and $\sigma=12$ for methane (3 rotations per axis, and 4 axes)
+\end{itemize}
+\section*{Vibrations}
+\begin{itemize}
+	\item For vibrations we use the harmonic oscillator where $E_n = hc\tilde{\nu}\left(n+\dfrac{1}{2}\right)$
+	\item This time the sum can be solved analytically through a series identity. This is good, since integrating would definitely NOT be a good approximation for vibrations
+	\item $q_V = \dfrac{e^{-\nicefrac{\beta hc\tilde{\nu}}{2}}}{1-e^{-\beta hc\tilde{\nu}}}$ With zero point energy
+	
+	$q_V = \dfrac{1}{1-e^{-\beta hc\tilde{\nu}}}$ without zero point energy
+\end{itemize}
+\section*{Electronic States}
+\begin{itemize}
+	\item Electronic energy levels do not follow an easy formula except for hydrogenic atomic orbitals, so generally they must be calculated computationally
+	\item $q_E = \sum\limits_n g_ne^{-\beta E_n}$, or for $E_n$ in $cm^{-1}$ we have $q_E = \sum\limits_n g_ne^{-\beta hcE_n}$
+\end{itemize}
+\section*{Practice}
+Consider an ensemble of 1000 \ch{N2} gas molecules at room temperature ($T=298.15~K$). Find $q$ and $Q$ for this system using the canonical ensemble with molecular units. $B_{\ch{N2}} = 1.998~cm^{-1}$, $\tilde{\nu}_{\ch{N2}} = 9552~cm^{-1}$, and the first 3 excited electronic states have $E_1 = 50203~cm^{-1}$, $g_1 = 3$, $E_2 = 59619~cm^{-1}$, $g_2 = 9$, $E_3 = 59808~cm^{-1}$, and $g_3 = 15$. At atmospheric pressure and room temperature these molecules will occupy a volume of $3.72\times10^{-23} m^3$, and the mass of a nitrogen molecule is $4.7\times10^{-26} kg$
+
+$q_T=5.4\times10^9$, $q_R=51.86$, $q_V\approx1$, $q_E \approx 1$, $q_{total}=2.8\times10^{11}$
+
+$Q=3.6\times10^{8879}$ -- This is with indistinguishable particles, and is a stunningly large number (nearly a googol raised to the power of 100)
+\section*{Homework Problems}
+\begin{itemize}
+	\item P14.4 -- Translational partition functions
+	\item P14.13 -- Rotational partition functions
+	\item P14.19 -- Boltzmann analysis of rotational state populations
+	\item P14.29 -- Vibrational partition function
+\end{itemize}
+\section*{Homework Solutions}
+\begin{itemize}
+	\item P14.4 -- $q_T = 2.44\times10^{29}$, and $T=590~K$
+	\item P14.13 -- $q_R=401$
+	\item P14.19 -- The $J=19\rightarrow20$ transition
+	\item P14.29 -- $q_V=1.67$
+\end{itemize}
+
+\chapter{Statistical Thermodynamics}
+\section*{Energy}
+\begin{itemize}
+	\item Average energy is: $\avg{\varepsilon} = k_BT^2\left(\dfrac{\mathrm{d}\ln q}{\mathrm{d}T}\right)$
+	\item Total ensemble energy is: $E = Nk_BT^2\left(\dfrac{\mathrm{d}\ln q}{\mathrm{d}T}\right)$
+	\item Total internal is: $U=-\left(\dfrac{\partial\ln Q}{\partial\beta}\right)_V = -N\left(\dfrac{\partial\ln q}{\partial\beta}\right)_V$
+	\item Internal energy can therefore be related to each of the energetic degrees of freedom
+	\item $U_T = \dfrac{3}{2}NK_bT = \dfrac{3}{2}nRT$
+	\item $U_R = nRT$ for linear polyatomics, and $U_R=\dfrac{3}{2}nRT$ for others
+	\item $U_V = \dfrac{Nhc\tilde{\nu}}{e^{\beta hc\tilde{\nu}}-1}$, which gives $U_V = nRT$ in the high temperature limit
+\end{itemize}
+\section*{Heat Capacity}
+\begin{itemize}
+	\item $C_V = \left(\dfrac{\partial U}{\partial T}\right)_V = -k\beta^2\left(\dfrac{\partial U}{\partial \beta}\right)_V$
+	\item Like internal energy, the heat capacity can be broken into components
+	\item $\left(C_V\right)_T = \dfrac{3}{2}Nk_B = \dfrac{3}{2}nR$
+	\item $\left(C_V\right)_R = Nk_B$ for linear rotors and $\left(C_V\right)_R = \dfrac{3}{2}Nk_B$ for others
+	\item $\left(C_V\right)_V = Nk_B\beta^2h^2c^2\tilde{\nu}^2\dfrac{e^{\beta hc\tilde{\nu}}}{\left(e^{\beta hc\tilde{\nu}}-1\right)^2}$
+	\item Figure 15.7 shows how heat capacity of a gas increases in stages with $T$
+	\item Heat capacity of a solid ranges from $0$ to $3R$ according to the Einstein Solid model
+\end{itemize}
+\section*{Entropy}
+\begin{itemize}
+	\item Entropy was defined by Boltzmann as: $S=k_B\ln W$ Where $W$ is the number of microstates
+	\item We can relate it in statistical thermodynamics as: $S=\dfrac{E}{T} + k_B\ln Q = \dfrac{U}{T}+k_B\ln Q$
+	\item We can also show that $S = \left(\dfrac{\partial}{\partial T}(k_BT\ln Q)\right)_V$
+\end{itemize}
+\section*{Equilibrium}
+\begin{itemize}
+	\item Figure 15.12 illustrates how equilibrium responds to changes in enthalpy and entropy in a reaction
+	\item The side with closer energy spacings has the greater $S$, while the side with the lower ground state has the lowest $H$
+	\item Higher $T$ gives higher $\avg{\varepsilon}$
+	\item Compare which side can fill the most states at a given $\avg{\varepsilon}$ so determine if the reaction is reactant or product favored
+\end{itemize}
+
+\chapter{Kinetic Theory of Gases}
+\begin{itemize}
+	\item The gas kinetic theory describes all gas properties in terms of the kinetic energy and collisions of gas particles
+	\item This theory can recreate all the familiar aspects of gas behavior without relying on thermodynamics
+\end{itemize}
+\section*{The Maxwell Distribution of Speeds}
+\begin{itemize}
+	\item The maxwell distribution of speeds (Figure 16.5 and 16.6)
+	\item This distribution gives the following averages: 
+	
+	$v_{mp} = \sqrt{\dfrac{2RT}{M}}$, $v_{avg}=\sqrt{\dfrac{8RT}{\pi M}}$, and $v_{rms} = \sqrt{\dfrac{3RT}{M}}$	
+	\item We use $v_{rms}$ for finding the expectation value for quantities that depend on $v^2$ rather than on $v$
+	\item For example: $E_T = \dfrac{1}{2}mv^2$, so for an ensemble: $\avg{E_T}=\dfrac{1}{2}mv_{rms}^2\neq\dfrac{1}{2}mv_{avg}^2$
+\end{itemize}
+\section*{Gas Effusion}
+\begin{itemize}
+	\item Gas molecules escaping a pressurized vessel through a hole is called effusion
+	\item This process can be modeled as gas molecules ``colliding'' with the hole
+	\item Since molecules are so very small, the hole is very large relative to the gas
+	\item The factors which control the rate of gas ``collisions'' with the hole are particle density ($\tilde{N} = \dfrac{N}{V} = \dfrac{P}{k_BT}$), and $v_{avg}$
+	\item Collisional flux: $Z_c=\dfrac{P}{\sqrt{2\pi mk_BT}}=\dfrac{PN_A}{\sqrt{2\pi MRT}}$
+\end{itemize}
+\section*{Molecular Collisions}
+\begin{itemize}
+	\item Many gas phase reactions depend on molecular collisions, so the rate of those collisions is very important
+	\item When two gas molecules collide, their velocities combine to form an effective collisional speed $v_{12}$, which gives the collision energy and is important to the possibility of overcoming an activation energy
+	\item Because the particles are moving in three dimensions, most collisions will be glancing and we cannot simply add the speeds together. We must instead add their velocity \emph{vectors}
+	\item For particles traveling on a line, it is easy: $\avg{v_{12}}=\avg{v_1}\pm\avg{v_2}$, with ``+'' representing particles moving in opposite directions and ``-'' representing particles moving in the same direction
+	\item For particles colliding at $90^\circ$ with respect to each other, then the collisional velocity is the sum of their velocity vectors, which forms the hypotenuse of a right triangle
+	\item Applying the Pythagorean theorem gives:
+	
+	$\avg{v_{12}} = \sqrt{\avg{v_1}^2+\avg{v_2}^2} = \sqrt{\dfrac{8RT}{\pi\mu}}$ where $\mu=\dfrac{M_1M_2}{M_1+M_2}$
+	\item For all other angles is complex, involving trigonometry along with the probability of colliding at each angle
+	\item Figure 16.10 shows how to analyze the collisional frequency -- Note that $\sigma = \pi(r_1+r_2)^2$
+	\item The particle collision frequency is the frequency of collisions for a single particle:
+	
+	$z_{12}=\tilde{N}_2\sigma\sqrt{\dfrac{8RT}{\pi\mu}}$
+	\item Finally, the total collisional frequency is the frequency for a single particle times the particle density:
+	
+	$Z_{12} = \tilde{N}_1z_{12} = \tilde{N}_1\tilde{N}_2\sigma\sqrt{\dfrac{8RT}{\pi\mu}}$
+\end{itemize}
+\section*{Mean Free Path}
+\begin{itemize}
+	\item Mean free path is the average distance a gas molecule will travel before it collides with another particle
+	\item $\lambda_1 = \dfrac{v_{avg}}{z_{11}+z_{12}}$
+	\item For the case of a single gas: $\lambda = \left(\dfrac{RT}{PN_A}\right)\dfrac{1}{\sqrt{2}\sigma}=\dfrac{1}{\tilde{N}\sqrt{2}\sigma}$ \item Watch your units! $\sigma$ must be in $dm^2$ to use volumes in $L$
+\end{itemize}
+\section*{Homework Problems}
+\begin{itemize}
+	\item P16.3 -- Velocities under the Maxwell distribution of speeds
+	\item P16.5 -- Relating velocities to kinetic energy
+	\item P16.28 -- Single-particle collision frequency
+	\item P16.32 -- Mean free path
+\end{itemize}
+\section*{Homework Solutions -- 5 points each for 20 total}
+\begin{itemize}
+	\item P16.3
+	
+	\begin{tabular}{cccc}
+		& $v_{mp}$ & $v_{avg}$ & $v_{rms}$\\ \midrule
+		300 K & $395\nicefrac{m}{s}$ & $446\nicefrac{m}{s}$ & $484\nicefrac{m}{s}$ \\
+		500 K & $510\nicefrac{m}{s}$ & $575\nicefrac{m}{s}$ & $624\nicefrac{m}{s}$ \\
+	\end{tabular}
+	
+	For \ch{H2}, multiply all \ch{O2} values by $3.98$
+	\item P16.5 -- $v_{avg}(\ch{CCl4}) = 202 \nicefrac{m}{s}$, $v_{avg}(\ch{O2}) = 444 \nicefrac{m}{s}$, and $\avg{E_K}=6.17\times 10^{-21}J$ for both
+	\item P16.28
+	\begin{itemize}
+		\item $z_{12} = 7\times10^9 s^{-1}$
+		\item $P=0.38~atm$
+		\item $\lambda = 1.3\times10^{-7}m$
+	\end{itemize}
+	\item P16.32
+	\begin{itemize}
+		\item $\lambda = 1.6\times10^{-7}m$
+		\item $\lambda = 1.6\times10^{-5}m$
+		\item $\lambda = 1.6\times10^{-2}m$
+	\end{itemize}
+\end{itemize}
+\chapter{Transport Phenomena}
+\section*{Basic Concepts in Trasport Phenomena}
+\begin{itemize}
+	\item Transport is any change in a system that originates from a non-equilibrium spatial gradient in the system variables
+	\item Mass transport (matter) and thermal conduction (heat) are the most common types of transport phenomena
+	\item The rate of change in a property is called ``flux,'' and it is defined in relation to the spatial gradient of that property
+
+	Fick's First Law: $J_{x,\mathrm{property}} = -\alpha \dfrac{\mathrm{d} (\mathrm{property})}{\mathrm{d}x}$
+	\item $\alpha$ is the transport coefficient, and contains all of the particulars of a given transport phenomenon
+\end{itemize}
+\section*{Mass Transport -- Diffusion}
+\begin{itemize}
+	\item Diffusion is the movement of particles across a concentration gradient
+	\item To find $\alpha$, we can use a similar analysis as for effusion -- That is, find the number of particles which ``collide'' with a surface
+	\item This time we find the amount colliding from the left compared to the amount colliding from the right
+	\item The derivation is in the book, but we can simply rely on the result:
+	
+	$J_{\mathrm{Mass Transport}} = -D\left(\dfrac{\mathrm{d}\tilde{N}}{\mathrm{d}x}\right)_{x=0}$ where $D=\dfrac{1}{3}v_{avg}\lambda$, and $\lambda$ is the mean free path	
+\end{itemize}
+\section*{Time Evolution of a Concentration Gradient}
+\begin{itemize}
+	\item Due to the particles flowing in one direction, the concentration at one end goes up while the concentration at the other end goes down
+	
+	Fick's Second Law: $\dfrac{\partial \tilde{N}(x,t)}{\partial t} = D\dfrac{\partial^2\tilde{N}(x,t)}{\partial x^2}$	
+	\item Fick's second law can be solved to give the complete time-dependent function for concentration:
+	
+	$\tilde{N}(x,t)=\dfrac{N_0}{2A\sqrt{\pi Dt}}e^{-\nicefrac{x^2}{4Dt}}$ -- For a system starting with all particles at $x=0$
+	\item Figure 17.5 shows how a concentration gradient would evolve over time
+	\item $\tilde{N}(x,t)=\dfrac{N_0}{2A\sqrt{\pi Dt}}e^{-\nicefrac{x^2}{4Dt}}$, Where $N_0$ is the number of molecules and $A$ is the cross-sectional area
+	\item Figure 17.5 shows how this function evolves over time
+	\item We can characterize how rapidly something diffuses with the rms displacement:
+	
+	$x_{rms} = \sqrt{2Dt}$ for 1-D, and $r_{rms} = \sqrt{6Dt}$ for for 3-D
+	\item $\lambda$ shows up in $D$ because diffusion happens by a random walk trajectory rather than by a ballistic trajectory
+	\item The effect of mean free path is dramatically illustrated in a pair of videos on bromine diffusion by YouTube channel ``Isaac Physics''
+	\item We can use the diffusion rate to estimate the collisional radius, since $D$ depends on $\lambda$, which depends on $\sigma$
+	\item Based on the video, what is the radius of bromine?
+	\begin{itemize} 
+		\item After 600 s, $x_{rms}$ is about $0.05~m$, so $D \approx 2\times10^{-6}\dfrac{m}{s}$
+		\item Now, $D=\dfrac{1}{3}v_{avg}\lambda$, and $v_{avg}=\sqrt{\dfrac{8RT}{\pi M}}$ so \ldots 
+		\item $\lambda \approx \dfrac{3\cdot2\times10^{-6}\dfrac{m}{s}\sqrt{\pi\cdot0.160\dfrac{kg}{mol}}}{\sqrt{8\cdot8.314\dfrac{J}{mol~K}\cdot298~K}}\approx 30~nm$
+		\item $\lambda = \left(\dfrac{RT}{PN_A}\right)\dfrac{1}{\sqrt{2}\sigma}$ so $\sigma \approx 9.5713\times10^{-16}m^2$
+		\item \ch{N_2} has a van der Waals radius of $182~pm$, so $9.5713\times10^{-19}m^2 = \pi(r_{\ch{Br2}}+1.82\times10^{-10})^2$
+		\item $r_{\ch{Br2}} \approx 370~pm$, which is high, but not an unreasonable value! 
+	\end{itemize}
+\end{itemize}
+\section*{Thermal Conduction}
+\begin{itemize}
+	\item Heat is transferred through conduction, convection, and radiation. Here we consider only conduction
+	\item Heat is conducted through molecular collisions, which exchange kinetic energy until thermal equilibrium is reached
+	\item Recall that the average translational energy of a gas is: $\avg{E_T} = \dfrac{3}{2}k_BT$
+	\item The flux in this case is not particles, but kinetic energy:
+	
+	$J = -\dfrac{1}{3}\dfrac{C_{V,m}}{N_A}v_{avg}\tilde{N}\lambda\left(\dfrac{\mathrm{d}T}{\mathrm{d}x}\right)_{x=0} = -\kappa \left(\dfrac{\mathrm{d}T}{\mathrm{d}x}\right)_{x=0}$
+	
+	\item Thermal conductivity is: $\kappa = \dfrac{1}{3}\dfrac{C_{V,m}}{N_A}v_{avg}\tilde{N}\lambda$
+	\item And the molecular heat capacity is:
+	
+	\begin{tabular}{c|c|c|c}
+		& Monoatomic Gas & Linear Polyatomic Gas & Non-Linear Polyatomic Gas\\ \midrule
+		$\dfrac{C_{V,m}}{N_A}$ & $\dfrac{3}{2}k_B$ & $\dfrac{5}{2}k_B$ & $3k_B$
+	\end{tabular}
+	\item Thermal conductivity can also be used to estimate collisional radius since it depends on $\lambda$
+\end{itemize}
+\section*{Homework}
+\begin{itemize}
+	\item P17.3 -- Collisional cross-section from $D$
+	\item P17.10 -- Finding thermal conductivity of gases
+	\item \ch{NO2} is a brown gas with a collisional radius of $200~pm$. 
+	\begin{itemize}
+		\item What is the diffusion coefficient for \ch{NO2} at $P=1~atm$ and $T=298.15~K$?
+		\item What is $x_{rms}$ at $t=100~s$ for a sample of \ch{NO2} which started at $x=0$ and diffuses along only one dimension?
+		\item If the sample started with $2\times10^{19}$ molecules and diffuses through a tube with coss-sectional area $4.5~cm^2$, then what is the number density at $x=0$ and $t=100~s$?
+	\end{itemize}
+\end{itemize}
+\section*{Homework Solutions -- 5 points per section, for 40 points total}
+\begin{itemize}
+	\item P17.3 --  a: $0.368~nm^2$ and b: $0.265~nm^2$	
+	\item P17.10 -- a: $0.0052\nicefrac{J}{Kms}$, b: $0.0025\nicefrac{J}{Kms}$, and c: $0.0051\nicefrac{J}{Kms}$	
+	\item \ch{NO2} Problem
+	\begin{itemize}
+		\item $\lambda = 57.15~nm$, and $v_{avg}=370.41\nicefrac{m}{s}$, so $D=7.06\times10^{-6}~\nicefrac{m^2}{s}$
+		\item $x_{rms}=3.76~cm$
+		\item $\tilde{N}=4.72\times10^{23}m^{-3} = 4.72\times10^{20}L^{-1} = 0.784\nicefrac{mmol}{L}$
+	\end{itemize}
+\end{itemize}
+
+\chapter{Elementary Chemical Kinetics}
+\section*{Homework}
+\begin{itemize}
+	\item P18.2 -- First-order kinetics
+	\item P18.7 -- Finding reaction order from initial rate data
+	\item P18.14 -- Half-life and reaction rate
+	\item P18.19 -- Half-life and time-dependent concentration
+	\item P18.36 -- The Arrhenius equation
+\end{itemize}
+\section*{Homework Solutions -- 5 points per problem (25 total)}
+\begin{itemize}
+	\item P18.2: a) $rate = -\dfrac{\mathrm{d}P_{\ch{C4H8}}}{\mathrm{d}t}=\dfrac{\mathrm{d}P_{\ch{C2H4}}}{2\mathrm{d}t}$ ~~ b) $t_{\nicefrac{1}{2}}=2.79\times10^{3}s$ c) ~~ $t = 425~s$
+	\item P18.7: $rate = 1.61\times10^{-6}kP\!a^{-2}s^{-1}P_{\ch{NO}}^2P_{\ch{H2}}$
+	\item P18.14: $rate = 7415m^{-1}$ -- Note that the book answer is wrong, wrong, wrong!
+	\item P18.19: Decay would give activity of $0.65 \mu Ci$, which is greater than the observed activity so the protein is probably reacting with oxygen
+	\item P18.36: a) $k=7.0\times10^{-29}M^{-1}s^{-1}$ ~~ b) $k=3.5\times10^{-35}M^{-1}s^{-1}$ -- Again, the textbook appears to be wrong on these
+\end{itemize}
+\chapter{Complex Reaction Mechanisms}
+\section*{Reaction Mechanisms}
+\begin{itemize}
+	\item A reaction can be split up into elementary steps
+	\item For a mechanism to be considered valid, it must meet two criteria:
+	\begin{itemize}
+		\item The mechanism must add up to the total overall reaction
+		\item The mechanism's predicted rate law must match the observed rate law
+	\end{itemize}
+	\item Intermediates and catalysts will show up in a reaction mechanism but not an overall reaction
+\end{itemize}
+\section*{Pre-equilibrium Approximation}
+\begin{itemize}
+	\item Consider the reaction: \ch{A + B <=> I -> P}
+	\item If the first equilibrium is fast relative to the second step, then we can simplify the kinetics
+	\item $rate = k_2[\ch{I}]$, and $[\ch{I}] = \dfrac{K_{eq}}{[\ch{A}][\ch{B}]}$ so $rate = k_2K_{eq}[\ch{A}][\ch{B}] = k_{eff}[\ch{A}][\ch{B}]$
+\end{itemize}
+\section*{The Lindemann Mechanim}
+\begin{itemize}
+	\item Some unimolecular dissociation reactions (\ch{A->Products}) exhibit surprisingly complex kinetics
+	\item Lindemann proposed the following mechanism:
+	
+	\ch{A + A <=> A^* + A}
+	
+	\ch{A^* -> P}
+	\item The rate should be: $\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = k_2[\ch{A^*}]$
+	\item This states that before dissociation, a molecule must first be energetically activated through collisions
+	\item The first step is not necessarily at equilibrium, so we must use the steady-state approximation
+	\item $\dfrac{\mathrm{d}[\ch{A^*}]}{\mathrm{d}t} = 0 = k_1[\ch{A}]^2 - k_{-1}[\ch{A}][\ch{A^*}] - k_2[\ch{A^*}]$
+	\item $[\ch{A^*}] = \dfrac{k_1[\ch{A}]^2}{k_{-1}[\ch{A}]+k_2}$
+	\item This gives us a final reaction rate of: $\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = \dfrac{k_1k_2[\ch{A}]^2}{k_{-1}[\ch{A}]+k_2}$
+	\item This can reduce to two extremes:
+	\begin{itemize}
+		\item For $k_2\gg k_{-1}[\ch{A}]$ (low $[\ch{A}]$), we get: $\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = k_1[\ch{A}]^2$
+		\item For $k_{-1}[\ch{A}]\gg k_2$ (high $[\ch{A}]$), we get: $\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = \dfrac{k_1k_2}{k_{-1}}[\ch{A}]$
+		\item Figure 19.1 shows the turn-over from one regime to another
+	\end{itemize}
+	\item The collision partner needn't be the same species as the reactant, so this mechanism can be generalized with a collisional partner \ch{M}
+	
+	$\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = \dfrac{k_1k_2[\ch{A}][\ch{M}]}{k_{-1}[\ch{M}]+k_2}$
+	\item In this case, we can define a unimolecular rate constant: $k_{uni} = \dfrac{k_1k_2[\ch{M}]}{k_{-1}[\ch{M}] + k_2}$
+\end{itemize}
+\section*{Catalysis}
+\begin{itemize}
+	\item Catalysts increase a reaction rate without being consumed. They differ from an intermediate because they are consumed then reformed, rather than formed and then consumed
+	\item The simplest catalytic mechanism is the formation of a substrate-catalyst complex, then dissociation into products:
+	
+	\ch{S + C <=> SC}
+	
+	\ch{SC -> P + C}
+	\item Just like the Lindemann mechanism, we do not assume equilibrium in the first step and instead use the steady-state approximation
+	
+	$\dfrac{\mathrm{d}[\ch{SC}]}{\mathrm{d}t}=0=k_1[\ch{S}][\ch{C}] - k_{-1}[\ch{SC}] - k_2[\ch{SC}]$
+	\item This gives: $[\ch{SC}] = \dfrac{k_1[\ch{S}][\ch{C}]}{k_{-1}+k_2} = \dfrac{[\ch{S}][\ch{C}]}{K_m}$
+	\item Here we defined the composite constant: $K_m = \dfrac{k_{-1}+k_2}{k_1}$	
+	\item The rate is then: $\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = \dfrac{k_2[\ch{S}][\ch{C}]}{K_m}$
+	\item This rate law tells us the reaction order with respect to substrate and catalyst, but it cannot be integrated to give us the rates and concentrations throughout the reaction
+	\item We can relate the concentrations at any given time to the initial concentrations by mass-balance equations
+	
+	\ch{[S]0 = [S] + [SC] + [P]}
+	
+	\ch{[C]0 = [C] + [SC]}
+	\item Which can be re-arranged to give:
+	
+	\ch{[S] = [S]0 + [SC] + [P]}
+	
+	\ch{[C] = [C]0 - [SC]}
+	\item Now we re-examine the steady-state condition: $K_m[\ch{SC}] = [\ch{S}][\ch{C}]$
+	
+	$K_m[\ch{SC}] = 0 = (\ch{[S]0 + [SC] + [P]})(\ch{[C]0 - [SC]})$
+	\item This is a quadratic equation, but can be simplified by assuming that $\ch{[P]}\approx 0$ and $\ch{[SC]}^2\approx 0$
+	\item With these assumptions we get:
+	
+	$\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = R_0 = \dfrac{k_2[\ch{S}]_0[\ch{C}]_0}{[\ch{S}]_0+[\ch{C}]_0+K_m}$
+	\item With more catalyst ($[\ch{S}]_0\ll[\ch{C}]_0$) we get: $R_0 = \dfrac{k_2[\ch{S}]_0[\ch{C}]_0}{[\ch{C}]_0+K_m}$
+	\item with more substrate ($[\ch{S}]_0\gg[\ch{C}]_0$) we get: $R_0 = \dfrac{k_2[\ch{S}]_0[\ch{C}]_0}{[\ch{S}]_0+K_m}$
+	\begin{itemize}
+		\item If $[\ch{S}]_0\ll K_m$ then the rate increases with $[\ch{S}]_0$ with a slope of $\dfrac{k_2[\ch{C}]_0}{K_m}$
+		\item If $[\ch{S}]_0\gg K_m$ then the rate is constant at $R_{max}=k_2[\ch{C}]_0$ -- This is when the catalyst is saturated and the reaction becomes 0th order
+	\end{itemize}
+\end{itemize}
+\section*{Enzyme Kinetics}
+\begin{itemize}
+	\item Enzymes are catalysts and generally follow the same kinetics as described above, replacing C with E
+	\item Take the enzyme rate expression for the case with excess substrate:
+	
+	$\dfrac{\mathrm{d}[\ch{P}]}{\mathrm{d}t} = R_0 = \dfrac{k_2[\ch{S}]_0[\ch{E}]_0}{[\ch{S}]_0+[\ch{E}]_0+K_m}$ and $R_{max}=k_2[\ch{E}]_0$
+	\item Now invert the rate and substitute in the term $R_{max}$:
+	
+	$\dfrac{1}{R_0} = \dfrac{1}{R_{max}} + \dfrac{K_m}{R_{max}}\dfrac{1}{[\ch{S}]_0}$
+	\item Plotting the inverse rate against inverse substrate concentration gives a Lineweaver-Burk plot with $slope = \dfrac{K_m}{R_{max}}$
+	\item Enzymes (and catalysts generally) can also be affected by a competing inhibition reaction:
+	
+	\ch{E+I <=> EI}
+	\item To solve this system, we must assume that both the enzyme-substrate and enzyme-inhibitor complexes are in equilibrium
+	\item Ultimately we get:
+	
+	$R_0 = \dfrac{k_2[\ch{S}]_0[\ch{E}]_0}{[\ch{S}]_0+K_m\left(1+\dfrac{[\ch{I}]}{K_I}\right)}$ Where $K_I$ is the equilibrium constant
+	\item Replace $K_m\left(1+\dfrac{[\ch{I}]}{K_I}\right) = K_m^*$ and a Lineweaver-Burk plot can be made the same as before	
+\end{itemize}
+\section*{Radical Chain Reactions}
+\section*{Photochemical Processes}
+\section*{Oscillatory Reactions}
+\section*{Marcus Theory}
+
+\end{document}
