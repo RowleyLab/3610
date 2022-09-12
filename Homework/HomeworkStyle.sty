@@ -75,10 +75,10 @@
 % Define a macro \Autoref like \autoref but with a forced capital letter
 % Note that Figures, Equations, and Tables have a capital letter anyway.
 \newcommand{\Autoref}[1]{\def\sectionautorefname{Section}
-                         \def\chapterautorefname{Chapter}
-                         \autoref{#1}
-                         \def\sectionautorefname{section}
-                         \def\chapterautorefname{chapter}}
+	\def\chapterautorefname{Chapter}
+	\autoref{#1}
+	\def\sectionautorefname{section}
+	\def\chapterautorefname{chapter}}
 
 % Set sizes of margins and figures
 \usepackage[margin=1in]{geometry}
@@ -99,11 +99,11 @@
 \newcommand{\ket}[1]{\left| #1 \right>} % for Dirac kets
 \newcommand{\bra}[1]{\left< #1 \right|} % for Dirac bras
 \newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
- \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+	\left. #2 \vphantom{#1} \right>} % for Dirac brackets
 \newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right|
- #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+	#2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
 \newcommand{\ketbra}[2]{\left| #1 \vphantom{#2} \right>
- \left< #2 \vphantom{#1} \right|} % for Dirac matrix elements
+	\left< #2 \vphantom{#1} \right|} % for Dirac matrix elements
 
 % Fix the deprecated \bf command used by bibtex
 \renewcommand{\bf}{\textbf}
@@ -112,9 +112,9 @@
 \chapterstyle{thatcher}
 \makeevenfoot{plain}{}{}{}
 \makeoddfoot{plain}{}{}{}
-\makeevenhead{plain}{}{}{CHEM~3610,~Fall~2017~--~\thepage~of~\pageref{LastPage}}
-\makeoddhead{plain}{}{}{CHEM~3610,~Fall~2017~--~\thepage~of~\pageref{LastPage}}
-\pagestyle{plain} 
+\makeevenhead{plain}{}{}{CHEM~3610,~\thepage~of~\pageref{LastPage}}
+\makeoddhead{plain}{}{}{CHEM~3610,~\thepage~of~\pageref{LastPage}}
+\pagestyle{plain}
 \usepackage{nth}
 
 % Make the section headings smaller
