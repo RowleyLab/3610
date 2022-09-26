@@ -1,0 +1,191 @@
+\documentclass[12pt, letterpaper]{memoir}
+\usepackage{MyStyle}
+\newgeometry{margin=.9in}
+
+\begin{document}
+\newpage
+\pagestyle{empty}
+
+~
+\vspace{-3em}
+\begin{center}
+	{\LARGE 3610 Midterm Exam 3 Equations and Constants}	
+\end{center}
+
+\vspace{-1em}
+\begin{minipage}{0.57\linewidth}
+	\begin{mdframed}
+		\begin{tabular}{rlcrl}
+			\multicolumn{5}{c}{Gas Constant Values}\\ \midrule
+			$8.314$ & $\dfrac{J}{mole~K}$ && $0.08314$ & $\dfrac{L~bar}{mole~K}$\\ \\
+			$0.08206$ & $\dfrac{L~atm}{mole~K}$ && $8.314$ & $\dfrac{m^3~Pa}{mole~K}$\\ \\
+		\end{tabular}
+		\begin{tabular}{rlcrl}
+			\multicolumn{5}{c}{Boltzmann Constant Values}\\ \midrule
+			$1.381 \times 10^{-23}$ & $\dfrac{J}{K}$ && $0.6950$ & $\dfrac{cm^{-1}}{K}$\\ \\
+		\end{tabular}
+	\end{mdframed}
+\end{minipage}
+\hspace{20pt}
+\begin{minipage}{0.4\linewidth}
+	\begin{mdframed}
+		\begin{tabular}{rcl}
+			\multicolumn{3}{c}{Conversions}\\ \midrule
+			$1~L~atm $ & $=$ & $101.325~J$\\ \\
+			$1~atm $ & $=$ & $1.01325~bar$\\ \\
+			$1~atm $ & $=$ & $760~torr$\\ \\
+			$1~atm $ & $=$ & $101,325~Pa$ \\ \\
+		\end{tabular}
+	\end{mdframed}	
+\end{minipage}
+
+\noindent
+\begin{minipage}[t]{0.5\linewidth}
+	\begin{equation*}
+		\Delta G_{mix} = nRT\left(\chi_A\ln\chi_A+\chi_B\ln\chi_B\right)
+	\end{equation*}
+
+	\begin{equation*}
+		p_A=\chi_Ap^{\star}_A
+	\end{equation*}
+
+	\begin{equation*}
+		\mu_A=\mu_A^{\star}+RT\ln\chi_A
+	\end{equation*}
+
+	\begin{equation*}
+		\Delta T_b=K_b\chi_B = K_bC_B
+	\end{equation*}
+
+	\begin{equation*}
+		\Delta T_f=K_f\chi_B=K_fC_B
+	\end{equation*}
+
+	\begin{equation*}
+		\frac{n_l}{n_{total}}=\left|\frac{z_B-y_B}{x_B-y_B}\right|
+	\end{equation*}
+
+	\begin{equation*}
+		\mu_B=\mu^{\std}_B+RT\ln\gamma_B\chi_B
+	\end{equation*}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+	\begin{equation*}
+		\Delta S_{mix} = -nR\left(\chi_A\ln\chi_A+\chi_B\ln\chi_B\right)
+	\end{equation*}
+
+	\begin{equation*}
+		p_B=\chi_BK_B
+	\end{equation*}
+
+	\begin{equation*}
+		K_b=\frac{RT^{\star 2}_b}{\Delta H_{vap}}
+	\end{equation*}
+
+	\begin{equation*}
+		K_f=\frac{RT^{\star 2}_f}{\Delta H_{freeze}}
+	\end{equation*}
+
+	\begin{equation*}
+		\frac{n_g}{n_{total}}=\abs{\frac{x_B-z_B}{x_B-y_B}}
+	\end{equation*}
+
+	\begin{equation*}
+		\ln\gamma_A=\xi\chi_B^2 \hspace{2em} \ln\gamma_B=\xi\chi_A^2
+	\end{equation*}
+
+	\begin{equation*}
+		I = \frac{1}{2}\sum\limits_{ions}z_i^2\left(\frac{c_i}{c^{\std}}\right) \hspace{2em} c^{\std}=1~molal
+	\end{equation*}
+	
+\end{minipage}
+
+\noindent
+\begin{minipage}[t]{0.5\linewidth}
+	
+	\begin{equation*}
+		\log\gamma_\pm = -\frac{A\abs{z_+z_-}\sqrt{I}}{1+B\sqrt{I}} + CI
+	\end{equation*}
+	
+	\begin{equation*}
+		\Delta G = \Delta G^{\std} +RT\ln Q
+	\end{equation*}
+	
+	\begin{equation*}
+		\Delta G^{\std}=-RT\ln K_{eq}
+	\end{equation*}
+	
+	\begin{equation*}
+		K_p=K_C\left(RT\right)^{\Delta n}
+	\end{equation*}
+	
+	\begin{equation*}
+		E_{cell}=E^{\std}_{cell}-\frac{RT}{\nu F}\ln Q
+	\end{equation*}	
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+	\begin{equation*}
+		\ln\frac{K_2}{K_1} = -\frac{\Delta H^{\std}}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right)
+	\end{equation*}
+	
+	\begin{equation*}
+		E_{cell}=E_{cathode}-E_{anode}
+	\end{equation*}
+	
+	\begin{equation*}
+		\frac{\mathrm{d}E^{\std}_{cell}}{\mathrm{d}T}=\frac{\Delta S^{\std}}{\nu F}
+	\end{equation*}
+	
+	\begin{equation*}
+		\nu_CE^{\std}_C = \nu_AE^{\std}_A + \nu_BE^{\std}_B
+	\end{equation*}
+
+	\begin{equation*}
+		\Delta H^{\std}=-\nu F\left(E^{\std}_{cell}-T\frac{\mathrm{d}E^{\std}_{cell}}{\mathrm{d}T}\right)
+	\end{equation*}	
+\end{minipage}
+
+\begin{equation*}
+	J_{matter}=-D\frac{\mathrm{d}\mathcal{N}}{\mathrm{d}z} \hspace{6em} J_{energy}=-\kappa\frac{\mathrm{d}T}{\mathrm{d}z} \hspace{6em} J_{x-momentum}=-\eta\frac{\mathrm{d}v_x}{\mathrm{d}z}
+\end{equation*}
+
+\noindent
+\begin{minipage}[t]{0.5\linewidth}
+	\begin{equation*}
+		D=\frac{1}{3}\lambda v_{mean}=\frac{1}{3}\left(\frac{k_BT}{\sigma p}\right)\left(\frac{8RT}{\pi M}\right)^{\nicefrac{1}{2}}
+	\end{equation*}
+
+	\begin{equation*}
+		\eta=\eta_0e^{\nicefrac{E_a}{RT}}
+	\end{equation*}
+
+	\begin{equation*}
+		G=\frac{1}{R}=\kappa\frac{A}{l}
+	\end{equation*}	
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}	
+	\begin{equation*}
+		\eta = \frac{1}{3}\lambda v_{mean}m\mathcal{N}=\frac{pMD}{RT}
+	\end{equation*}
+
+	\begin{equation*}
+		\kappa = \frac{1}{3} \lambda v_{mean}\nu\mathcal{N}k_B =  \frac{\nu pD}{T} \hspace{2em} \nu=\frac{1}{2}N_{D.o.F.}
+	\end{equation*}
+
+	\begin{equation*}
+		\Lambda_m = \frac{\kappa}{c}=\left(z_+u_+\nu_++z_-u_-\nu_-\right)F
+	\end{equation*}
+\end{minipage}
+
+\begin{equation*}
+	f=6\pi\eta a \hspace{10em} u = \frac{ze}{f} \hspace{10em} s=uE=u\frac{\Delta V}{m}
+\end{equation*}
+
+\begin{equation*}
+	c(x,t)=\frac{n_0}{A\sqrt{\pi Dt}}e^{-\nicefrac{x^2}{4Dt}} \hspace{10em} x_{rms}=\sqrt{2Dt}
+\end{equation*}
+
+\begin{equation*}
+	F=96,485\frac{C}{mol} \hspace{14em} e=1.60217662\times10^{-19} C
+\end{equation*}
+\end{document}	
