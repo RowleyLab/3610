@@ -4,27 +4,26 @@ import calendar
 import numpy as np
 
 #  Change these values to generate a new course schedule
-year = 2022
+year = 2024
 # Format is [month, day]
-start = [8, 31]
-end = [12, 9]
+start = [8, 28]
+end = [12, 6]
 
 # 0-M, 1-T, 2-W, 3-R, 4-F, 5-S, 6-S
 Days = [0, 2, 4]
 
 # Format is (month, day): 'Holiday Name'
-
 # Fall Holidays
 Holidays = {
-    (9, 5): "Labor Day",
-    (10, 17): "Fall Break",
-    (10, 18): "Fall Break",
-    (11, 21): "Thanksgiving Break",
-    (11, 22): "Thanksgiving Break",
-    (11, 23): "Thanksgiving Break",
-    (11, 24): "Thanksgiving Break",
-    (11, 25): "Thanksgiving Break",
-}
+     (9, 2): "Labor Day",
+     (10, 14): "Fall Break",
+     (10, 15): "Fall Break",
+     (11, 25): "Thanksgiving Break",
+     (11, 26): "Thanksgiving Break",
+     (11, 27): "Thanksgiving Break",
+     (11, 28): "Thanksgiving Break",
+     (11, 29): "Thanksgiving Break",
+ }
 # Format is ['title', 'chapter', length] for topics
 # Format is ['Exam #'] for midterm exams
 Topics = [
@@ -35,14 +34,14 @@ Topics = [
     ["Thermochemistry", "2C", 1],
     ["State Functions and Exact Differentials", "2D", 0.75],
     ["Adiabatic Changes", "2E", 0.75],
-    ["Makeup/Review Day (Midterm 1: Ch. 1--2)"],
+    ["Makeup/Review Day (Exam 1: Ch. 1--2)"],
     ["Entropy", "3A", 0.75],
     ["Entropy Changes", "3B", 0.75],
     ["The Measurement of Entropy and the System", "3C-3D", 0.75],
     ["Combining the First and Second Laws", "3D", 1],
     ["Phase Diagrams of Pure Substances", "4A", 1],
     ["Thermodynamic Aspects of Phase Transitions", "4B", 1],
-    ["Makeup/Review Day (Midterm 2: Ch. 3--4)"],
+    ["Makeup/Review Day (Exam 2: Ch. 3--4)"],
     ["The Thermodynamic Description of Mixtures", "5A", 1],
     ["The Properties of Solutions", "5B", 1],
     ["Phase Diagrams of Binary Systems", "5C-5D", 0.75],
@@ -54,7 +53,7 @@ Topics = [
     ["Transport in Gases", "16A", 1],
     ["Motion in Liquids", "16B", 1],
     ["Diffusion", "16C", 1],
-    ["Makeup/Review Day (Midterm 3: Ch. 5, 6, 16)"],
+    ["Makeup/Review Day (Exam 3: Ch. 5, 6, 16)"],
     ["The Rates of Chemical Reactions", "17A", 1],
     ["Integrated Rate Laws", "17B", 1],
     ["Reactions Approaching Equilibrium", "17C", 1],
@@ -66,7 +65,7 @@ Topics = [
     ["Transition-State Theory", "18C", 1],
     ["The Dynamics of Molecular Collisions", "18D", 1],
     ["Electron Transfer in Homogeneous Systems", "18E", 0.75],
-    ["Makeup/Review Day (Midterm 4: Ch. 17--18)"],
+    ["Makeup/Review Day (Exam 4: Ch. 17--18)"],
     # ["Adsorption and Desorption", "19A-19B", 0.75],
     # ["Heterogeneous Catalysis", "19C", 1],
     # ["Processes at Electrodes", "19D", 0.75],
