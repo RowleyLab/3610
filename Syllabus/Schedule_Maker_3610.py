@@ -4,10 +4,10 @@ import calendar
 import numpy as np
 
 #  Change these values to generate a new course schedule
-year = 2024
+year = 2026
 # Format is [month, day]
-start = [8, 28]
-end = [12, 6]
+start = [9, 2]
+end = [12, 11]
 
 # 0-M, 1-T, 2-W, 3-R, 4-F, 5-S, 6-S
 Days = [0, 2, 4]
@@ -15,15 +15,31 @@ Days = [0, 2, 4]
 # Format is (month, day): 'Holiday Name'
 # Fall Holidays
 Holidays = {
-     (9, 2): "Labor Day",
-     (10, 14): "Fall Break",
-     (10, 15): "Fall Break",
-     (11, 25): "Thanksgiving Break",
-     (11, 26): "Thanksgiving Break",
-     (11, 27): "Thanksgiving Break",
-     (11, 28): "Thanksgiving Break",
-     (11, 29): "Thanksgiving Break",
- }
+    (9, 7): "Labor Day",
+    (10, 19): "Fall Break",
+    (10, 20): "Fall Break",
+    (11, 23): "Thanksgiving Break",
+    (11, 24): "Thanksgiving Break",
+    (11, 25): "Thanksgiving Break",
+    (11, 26): "Thanksgiving Break",
+    (11, 27): "Thanksgiving Break",
+}
+# Summer Holidays
+# Holidays = {(7, 3): '\\nth{4} July',
+#             (7, 24): "\\nth{24} July"
+#             }
+# Spring Holidays
+# Holidays = {
+#     (1, 19): "Martin Luther King Day",
+#     (2, 16): "President's Day",
+#     (3, 9): "Spring Break",
+#     (3, 10): "Spring Break",
+#     (3, 11): "Spring Break",
+#     (3, 12): "Spring Break",
+#     (3, 13): "Spring Break",
+#     (3, 31): "Festival of Excellence",
+# }
+
 # Format is ['title', 'chapter', length] for topics
 # Format is ['Exam #'] for midterm exams
 Topics = [
@@ -73,7 +89,7 @@ Topics = [
 ]
 
 Day_Letters = ["M", "T", "W", "R", "F", "S", "S"]
-#%%
+# %%
 Class_Days = []
 Total_Days = 0
 for month in range(start[0], end[0] + 1):
@@ -108,14 +124,14 @@ for month in range(start[0], end[0] + 1):
 
 shortfall = len(Topics) - Total_Days
 print("Shortfall is {}".format(shortfall))
-#%%
+# %%
 combined_times = np.ones(len(Topics)) * 5
 for i in range(len(Topics) - 1):
     try:
         combined_times[i] = Topics[i][2] + Topics[i + 1][2]
     except:
         pass
-#%%
+# %%
 combined_indexes = []
 i = 0
 j = 0
@@ -131,7 +147,7 @@ while i < len(combined_times) and j < shortfall:
     else:
         i += 1
 print("Made up {} of the shortfall of {}.".format(j, shortfall))
-#%%
+# %%
 schedule = "\\begin{tabular}{rcccc}\n\
 & Date && Topic & Chapter\\\\\n"
 topic_num = 0
